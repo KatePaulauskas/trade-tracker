@@ -8,9 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Heading -->
     <h1 class="heading">Trade Tracker</h1>
-
+    <!-- Entry Area -->
     <div class="entry-area">
+        <!-- Balance Section -->
         <div class="update-balance">
             <h3 class="balance">Balance add/withdraw</h3>
             <p class="balance-amount">Enter the amount</p> 
@@ -18,19 +20,32 @@
             <button class="add-balance">Add</button>
             <button class="withdraw-balance">Withdraw</button>
         </div>
+        <!-- Add Trades Section -->
         <div class="add-trades">
-            <p class="new-trade">Add new trade</p>
-
-
+            <h3 class="new-trade">Add new trade</h3>
+            <form id="add-trade" method="POST">
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date" class="date-input" required />
+                <br/>
+                <label for="stock">Stock name</label>
+                <input type="text" name="stock" id="stock" class="date-input" required />
+                <br/>
+                <label for="result">Profit/loss amount</label>
+                <input type="number" name="result" id="result" class="date-input" required />
+                <br/>
+                <label for="comments">Comments</label>
+                <input type="text" name="comments" id="comments" class="date-input" required />
+                <br/>
+                <button type="submit" class="add-trade-button">Add</button>
+            </form>
         </div>
-
     </div>
-
+    <!-- Summary Section -->
     <div class="summary">
         <h2 class="trading-summary">Summary</h2>
 
     </div>
-
+    <!--  Progress over time Section -->
     <div class="trend">
         <h3 class="progress">Progress over time</h3>
 

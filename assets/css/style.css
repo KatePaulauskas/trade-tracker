@@ -6,3 +6,64 @@ body {
     background: #2b3c4b;
 
 }
+
+/* H1 styling */
+
+h1 {
+    font-family: "Averia Gruesa Libre", sans-serif;
+    color: #CEB4AF;
+    text-align: center;
+    font-size: 250%;
+    padding-top: 10px;
+}
+
+/* H2 & 3 styling */
+
+h2, h3 {
+    font-family: "Expletus Sans", sans-serif;
+    color: #A3B0BF;
+    text-align: center;
+    font-size: 150%;
+}
+
+/* Paragraph styling */
+
+p {
+    font-family: "Josefin Sans", sans-serif;
+    color: #8A8FA1;
+    font-size: 140%;
+}
+
+/* Apply font to all form elements */
+form,
+input,
+button,
+label {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #8A8FA1;
+    font-size: 115%;
+}
+
+/* Apply font to table elements */
+table,
+th,
+td {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #8A8FA1;
+    font-size: 115%;
+}
+
+button {
+    background-color: #CEB4AF;
+    width: 100px;
+    height: 30px;
+    color: #2b3c4b;
+    border-style: double;
+    border-radius: 15%;
+}
+
+button:hover {
+    background-color: #2b3c4b;
+    border-color:#8A8FA1;
+    color: #CEB4AF;
+}

@@ -24,6 +24,7 @@ h3 {
     color: #a3b0bf;
     text-align: center;
     font-size: 150%;
+    margin: 10px;
 }
 
 /* Paragraph styling */
@@ -94,7 +95,14 @@ button:hover {
     color: #ceb4af;
 }
 
+/* Style Balance Section input field */
 
+#balance-box {
+    margin: 10px;
+    width: 200px;
+    height: 27px;
+    font-size: 100%;
+}
 /* Style action buttons */
 
 button {

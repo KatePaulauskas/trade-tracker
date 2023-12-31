@@ -12,51 +12,54 @@
 <body>
     <!-- Heading -->
     <h1 class="heading">
-        <iconify-icon icon="icon-park-outline:stock-market"></iconify-icon>Trade
-        Tracker
+        <iconify-icon icon="icon-park-outline:stock-market"></iconify-icon>Trade Tracker
     </h1>
     <!-- Entry Area -->
-    <div class="entry-area">
+    <section class="entry-area">
         <!-- Balance Section -->
         <div class="update-balance">
-            <!-- Button for mobile only -->
-            <button class="balance-button">Balance add/withdraw</button>
             <!-- Heading to be used on larder screens instead of button -->
             <h3 class="balance">Balance add/withdraw</h3>
-            <input id="balance-box" type="number" placeholder="Enter the amount"/>
-            <div class="balance-action-buttons">
-                <button class="add-balance">Add</button>
-                <button class="withdraw-balance">Withdraw</button>
+            <!-- Button for mobile only -->
+            <button class="new-entry">Balance add/withdraw</button>
+            <div class="collapsable-entry-area">
+                <input id="balance-box" type="number" placeholder="Enter the amount" />
+                <div class="balance-action-buttons">
+                    <button class="add-balance">Add</button>
+                    <button class="withdraw-balance">Withdraw</button>
+                </div>
             </div>
         </div>
         <!-- Add Trades Section -->
         <div class="add-trades">
-            <!-- Button for mobile only -->
-            <button class="new-trade-button">Add new trade</button>
             <!-- Heading to be used on larder screens instead of button -->
             <h3 class="new-trade">Add new trade</h3>
-            <form id="add-trade" method="POST">
-                <label for="open-date">Open date</label>
-                <input type="date" name="open-date" id="open-date" class="date-input" required />
-                <br />
-                <label for="close-date">Close date</label>
-                <input type="date" name="close-date" id="close-date" class="date-input" required />
-                <br />
-                <label for="stock">Stock name</label>
-                <input type="text" name="stock" id="stock" class="date-input" required />
-                <br />
-                <label for="result">Profit/loss amount</label>
-                <input type="number" name="result" id="result" class="date-input" required />
-                <br />
-                <label for="comments">Comments</label>
-                <input type="text" name="comments" id="comments" class="date-input" required />
-                <br />
-                <button type="submit" class="add-trade-button">Add</button>
-            </form>
+            <!-- Button for mobile only -->
+            <button class="new-entry">Add new trade</button>
+            <div class="collapsable-entry-area">
+                <form id="add-trade" method="POST">
+                    <label for="open-date">Open date</label>
+                    <input type="date" name="open-date" id="open-date" class="date-input" required />
+                    <br />
+                    <label for="close-date">Close date</label>
+                    <input type="date" name="close-date" id="close-date" class="date-input" required />
+                    <br />
+                    <label for="stock">Stock name</label>
+                    <input type="text" name="stock" id="stock" class="date-input" required />
+                    <br />
+                    <label for="result">Profit/loss amount</label>
+                    <input type="number" name="result" id="result" class="date-input" required />
+                    <br />
+                    <label for="comments">Comments</label>
+                    <input type="text" name="comments" id="comments" class="date-input" required />
+                    <br />
+                    <button type="submit" class="add-trade-button">Add</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
     <!-- Summary Section -->
-    <div class="summary">
+    <section class="summary">
         <h2 class="trading-summary">Summary</h2>
         <table>
             <tr>
@@ -79,11 +82,11 @@
                 <td>00,00</td>
             </tr>
         </table>
-    </div>
+    </section>
     <!--  Progress over time Section -->
-    <div class="trend">
+    <section class="trend">
         <h3 class="progress">Progress over time</h3>
-    </div>
+    </section>
     <!-- IconifyIcon web component -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 

@@ -50,8 +50,9 @@ table,
 th,
 td {
     font-family: "Josefin Sans", sans-serif;
-    color: #8a8fa1;
+    color: #ceb4af;
     font-size: 115%;
+    padding: 5px;
 }
 
 /* Style enty area */
@@ -78,8 +79,7 @@ td {
 
 /* Style buttons to open Balance and New Trade sections */
 
-.balance-button,
-.new-trade-button {
+.new-entry {
     background-color: #868289;
     width: 250px;
     height: 40px;
@@ -88,6 +88,7 @@ td {
     border-style: double;
     border-color: #ceb4af;
     border-radius: 5%;
+    font-family: "Expletus Sans", sans-serif;
 }
 
 /* Style Balance Section input field */
@@ -98,9 +99,12 @@ td {
     height: 27px;
     font-size: 100%;
 }
+
 /* Style action buttons */
 
-.add-balance, .withdraw-balance, .add-trade-button {
+.add-balance,
+.withdraw-balance,
+.add-trade-button {
     background-color: #ceb4af;
     width: 100px;
     height: 30px;
@@ -121,7 +125,6 @@ button:hover {
     display: flex;
 }
 
-
 /* Style Add New Trade form */
 
 #add-trade {
@@ -135,6 +138,26 @@ button:hover {
 
 #add-trade input {
     width: 100%;
+}
+
+/* Hide collapsable entry areas on mobile */
+
+.collapsable-entry-area {
+    display: none;
+}
+
+/* Style Summary table */
+
+table {
+    width: 100%;
+    color: #8a8fa1;
+    margin-top: 15px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #a3b0bf;
 }
 
 /* Media query: tablets and larger screens (768px and up) */
@@ -153,8 +176,11 @@ button:hover {
     }
 
     /* Hide buttons to open Balance and New Trade sections */
-    .balance-button,
-    .new-trade-button {
+    .new-entry {
         display: none;
+    }
+
+    .collapsable-entry-area {
+        display: block;
     }
 }

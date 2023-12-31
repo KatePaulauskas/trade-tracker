@@ -83,16 +83,11 @@ td {
     background-color: #868289;
     width: 250px;
     height: 40px;
-    margin: 10px;
+    margin: 30px 10px 10px;
     color: #2b3c4b;
     border-style: double;
+    border-color: #ceb4af;
     border-radius: 5%;
-}
-
-button:hover {
-    background-color: #2b3c4b;
-    border-color: #8a8fa1;
-    color: #ceb4af;
 }
 
 /* Style Balance Section input field */
@@ -105,7 +100,7 @@ button:hover {
 }
 /* Style action buttons */
 
-button {
+.add-balance, .withdraw-balance, .add-trade-button {
     background-color: #ceb4af;
     width: 100px;
     height: 30px;
@@ -113,6 +108,7 @@ button {
     border-style: double;
     border-radius: 15%;
     margin: 5px;
+    line-height: 30px;
 }
 
 button:hover {
@@ -124,6 +120,23 @@ button:hover {
 .update-balance .balance-action-buttons {
     display: flex;
 }
+
+
+/* Style Add New Trade form */
+
+#add-trade {
+    margin-top: 10px;
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#add-trade input {
+    width: 100%;
+}
+
 /* Media query: tablets and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
 

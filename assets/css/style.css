@@ -1,27 +1,27 @@
 /* Import Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Expletus+Sans&family=Josefin+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Expletus+Sans&family=Josefin+Sans&display=swap");
 
 /* Basic styles */
 body {
     background: #2b3c4b;
-
 }
 
 /* H1 styling */
 
 h1 {
     font-family: "Averia Gruesa Libre", sans-serif;
-    color: #CEB4AF;
+    color: #ceb4af;
     text-align: center;
     font-size: 250%;
     padding-top: 10px;
 }
 
-/* H2 & 3 styling */
+/* H2 & H3 styling */
 
-h2, h3 {
+h2,
+h3 {
     font-family: "Expletus Sans", sans-serif;
-    color: #A3B0BF;
+    color: #a3b0bf;
     text-align: center;
     font-size: 150%;
 }
@@ -30,7 +30,7 @@ h2, h3 {
 
 p {
     font-family: "Josefin Sans", sans-serif;
-    color: #8A8FA1;
+    color: #8a8fa1;
     font-size: 140%;
 }
 
@@ -39,8 +39,8 @@ form,
 input,
 button,
 label {
-    font-family: 'Josefin Sans', sans-serif;
-    color: #8A8FA1;
+    font-family: "Josefin Sans", sans-serif;
+    color: #8a8fa1;
     font-size: 115%;
 }
 
@@ -48,13 +48,56 @@ label {
 table,
 th,
 td {
-    font-family: 'Josefin Sans', sans-serif;
-    color: #8A8FA1;
+    font-family: "Josefin Sans", sans-serif;
+    color: #8a8fa1;
     font-size: 115%;
 }
 
+/* Style enty area */
+.entry-area {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style Balance and Add Trades Sections */
+.update-balance,
+.add-trades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Hide Balance and New Trade headings */
+
+.balance,
+.new-trade {
+    display: none;
+}
+
+/* Style buttons to open Balance and New Trade sections */
+
+.balance-button,
+.new-trade-button {
+    background-color: #868289;
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+    color: #2b3c4b;
+    border-style: double;
+    border-radius: 5%;
+}
+
+button:hover {
+    background-color: #2b3c4b;
+    border-color: #8a8fa1;
+    color: #ceb4af;
+}
+
+/* Style action buttons */
+
 button {
-    background-color: #CEB4AF;
+    background-color: #ceb4af;
     width: 100px;
     height: 30px;
     color: #2b3c4b;
@@ -64,6 +107,28 @@ button {
 
 button:hover {
     background-color: #2b3c4b;
-    border-color:#8A8FA1;
-    color: #CEB4AF;
+    border-color: #8a8fa1;
+    color: #ceb4af;
+}
+
+/* Media query: tablets and larger screens (768px and up) */
+@media screen and (min-width: 768px) {
+
+    /* Change alignment of the enty area */
+    .entry-area {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    /* Display Balance and New Trade headings */
+    .balance,
+    .new-trade {
+        display: block;
+    }
+
+    /* Hide buttons to open Balance and New Trade sections */
+    .balance-button,
+    .new-trade-button {
+        display: none;
+    }
 }

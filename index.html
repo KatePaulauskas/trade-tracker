@@ -23,11 +23,13 @@
             <!-- Button for mobile only -->
             <button class="new-entry">Balance add/withdraw</button>
             <div class="collapsable-entry-area">
-                <input id="balance-box" type="number" placeholder="Enter the amount" />
+                <form>
+                <input type="number" name="balance-box"  id="balance-box" placeholder="Enter the amount" required/>
                 <div class="balance-action-buttons">
                     <button class="add-balance">Add</button>
                     <button class="withdraw-balance">Withdraw</button>
                 </div>
+                </form>
             </div>
         </div>
         <!-- Add Trades Section -->

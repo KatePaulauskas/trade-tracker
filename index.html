@@ -26,8 +26,9 @@
                 <form>
                 <input type="number" name="balance-box"  id="balance-box" placeholder="Enter the amount" required/>
                 <div class="balance-action-buttons">
-                    <button class="add-balance">Add</button>
-                    <button class="withdraw-balance">Withdraw</button>
+                    <!-- Set buttont to 'button' type to prevent submissions. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button -->
+                    <button id="add-balance" type="button">Add</button>
+                    <button id="withdraw-balance" type="button">Withdraw</button>
                 </div>
                 </form>
             </div>

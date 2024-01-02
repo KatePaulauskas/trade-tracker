@@ -21,6 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+//Add event listeners to 'Add' and 'Withdraw' buttons
+document.getElementById("add-balance").addEventListener("click", function () {
+
+});
+
+document.getElementById("withdraw-balance").addEventListener("click", function () {
+
+});
 
 /**
 * Get the initial investemnt amount, ensure the user input is a positive number

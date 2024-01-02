@@ -2,15 +2,22 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    // Loop through buttons to locate buttons with "new-entry" class, add event listener and display collapsable areas when buttons are clicked"
-
+    // Locate all buttons with the "new-entry" class
     const allNewEntryButtons = document.getElementsByClassName("new-entry");
     for (let button of allNewEntryButtons) {
+
+        // Add a click event listener to each button with the "new-entry" class
         button.addEventListener("click", function () {
+
+            // Target the next sibling elements (collapsible entry areas) in the DOM after buttons with the "new-entry" class
             let collapsableEntryArea = this.nextElementSibling;
+
+            // Check if the collapsible entry areas are hidden (display is set to 'none')
             let collapsableEntryAreaIsHidden = collapsableEntryArea.style.display === 'none';
+
+            // Display collapsible entry areas on buttons clicks if hidden; hide if shown
             collapsableEntryArea.style.display = collapsableEntryAreaIsHidden ? "block" : "none";
-            });
+        });
     }
 });
 

@@ -8,3 +8,19 @@ for (let button of allNewEntryButtons) {
         collapsableEntryArea.style.display = collapsableEntryAreaIsHidden ? "block" : "none";
     });
 }
+
+
+/**
+* Get the initial investemnt amount, ensure the user input is a positive number
+* Aletr the user if input is not a positive number
+*/
+
+// Update the local storage balance
+
+// Display the invested amount
+
+/**
+ * Adding or withdrawing form the invested amount
+ * If a user wants to update invested amount, get the new number, add or subtract it to / from the existing balance
+* Update displayed balance
+*/

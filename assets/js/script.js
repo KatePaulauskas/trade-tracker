@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-//Add event listeners to 'Add' and 'Withdraw' buttons
+// Add event listeners to 'Add' and 'Withdraw' buttons
 document.getElementById("add-balance").addEventListener("click", function () {
 
 });
@@ -30,16 +30,29 @@ document.getElementById("withdraw-balance").addEventListener("click", function (
 
 });
 
-//Get the initial investemnt amount entred by a user
+// Get the investemnt amount entred by a user
 function getInvestmentAmount() {
     return document.getElementById("balance-box").value;
+};
+
+// Ensure the user input is a positive amount, if so, update the local storage balance
+function investmentIsPositiveAmount () {
+    let amount = getInvestmentAmount();
+
+    if (amount > 0) {
+        storeBalance(amount);
+    }
+    // Alert the user if input is not a positive number
+    else {
+        alert ("Enter a positive amount!");
+    }
 }
 
-/** ensure the user input is a positive number
-* Alert the user if input is not a positive number
-*/
+// Function to update the local storage balance 
+function storeBalance(amount) {
+    localStorage.setItem("balance", amount);
+}
 
-// Update the local storage balance
 
 // Display the invested amount
 

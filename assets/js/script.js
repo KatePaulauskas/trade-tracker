@@ -32,7 +32,7 @@ document.getElementById("withdraw-balance").addEventListener("click", function (
 
 // Get the investemnt amount entred by a user
 function getInvestmentAmount() {
-    return document.getElementById("balance-box").value;
+    return parseFloat(document.getElementById("balance-box").value);
 };
 
 // Ensure the user input is a positive amount, if so, update the local storage balance
@@ -42,13 +42,14 @@ function investmentIsPositiveAmount () {
     if (amount > 0) {
         storeBalance(amount);
     }
+
     // Alert the user if input is not a positive number
     else {
         alert ("Enter a positive amount!");
     }
-}
+};
 
-// Function to update the local storage balance 
+// Function to update the local storage balance. Source: https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/
 function storeBalance(amount) {
     localStorage.setItem("balance", amount);
 }

@@ -102,11 +102,11 @@ td {
 
 /* Style action buttons */
 
-.add-balance,
-.withdraw-balance,
+#add-balance,
+#withdraw-balance,
 .add-trade-button {
     background-color: #ceb4af;
-    width: 100px;
+    width: 80px;
     height: 30px;
     color: #2b3c4b;
     border-style: double;
@@ -115,10 +115,8 @@ td {
     line-height: 30px;
 }
 
-button:hover {
-    background-color: #2b3c4b;
-    border-color: #8a8fa1;
-    color: #ceb4af;
+#withdraw-balance {
+    width: 130px;
 }
 
 .update-balance .balance-action-buttons {

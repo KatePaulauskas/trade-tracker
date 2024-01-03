@@ -181,4 +181,13 @@ td {
     .collapsable-entry-area {
         display: block;
     }
+    
+    /* Add on-hover effect on buttons */
+        #add-balance:hover,
+        #withdraw-balance:hover,
+        .add-trade-button:hover {
+    background-color: #2b3c4b;
+    border-color: #8a8fa1;
+    color: #ceb4af;
+    }
 }

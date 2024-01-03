@@ -30,8 +30,12 @@ document.getElementById("withdraw-balance").addEventListener("click", function (
 
 });
 
-/**
-* Get the initial investemnt amount, ensure the user input is a positive number
+//Get the initial investemnt amount entred by a user
+function getInvestmentAmount() {
+    return document.getElementById("balance-box").value;
+}
+
+/** ensure the user input is a positive number
 * Alert the user if input is not a positive number
 */
 

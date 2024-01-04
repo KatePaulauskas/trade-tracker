@@ -52,10 +52,15 @@ function investmentIsPositiveAmount () {
 // Function to update the local storage balance. Source: https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/
 function storeBalance(amount) {
     localStorage.setItem("balance", amount);
-}
+};
 
 
 // Display the invested amount
+
+function updateDisplayedInvestment() {
+    let currentInvestment = parseFloat(localStorage.getItem("balance")) || 0;
+    document.getElementById("total-investment").innerText = currentInvestment;
+};
 
 /**
  * Adding or withdrawing from the invested amount

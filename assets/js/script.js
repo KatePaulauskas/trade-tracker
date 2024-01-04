@@ -36,16 +36,30 @@ function getInvestmentAmount() {
 };
 
 // Ensure the user input is a positive amount, if so, update the local storage balance
-function investmentIsPositiveAmount (action) {
+function investmentIsPositiveAmount(action) {
     let amount = getInvestmentAmount();
+    // Get stored investment from the local storage, or display 'zero' if no data stored
+    let currentInvestment = parseFloat(localStorage.getItem("balance")) || 0;
 
     if (amount > 0) {
-        storeBalance(amount);
-    }
+        if (action === "add") {
+            // Add the entered amount to the invested balance
+            currentInvestment += amount;
+        } else if (action === "withdraw") {
 
+            // Subtract the amount from the invested balance
+            if (currentInvestment >= amount) {
+                currentInvestment -= amount;
+            } else {
+                alert("Cannot withdraw more than currently invested amount!");
+                return;
+            }
+        }
+        storeBalance(currentInvestment);
+    }
     // Alert the user if input is not a positive number
     else {
-        alert ("Enter a positive amount!");
+        alert("Enter a positive amount!");
     }
 };
 

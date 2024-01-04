@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Add event listeners to 'Add' and 'Withdraw' buttons
 document.getElementById("add-balance").addEventListener("click", function () {
-
+    investmentIsPositiveAmount("add");
 });
 
 document.getElementById("withdraw-balance").addEventListener("click", function () {
-
+    investmentIsPositiveAmount("withdraw");
 });
 
 // Get the investemnt amount entred by a user
@@ -36,7 +36,7 @@ function getInvestmentAmount() {
 };
 
 // Ensure the user input is a positive amount, if so, update the local storage balance
-function investmentIsPositiveAmount () {
+function investmentIsPositiveAmount (action) {
     let amount = getInvestmentAmount();
 
     if (amount > 0) {

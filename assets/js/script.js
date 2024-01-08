@@ -84,5 +84,12 @@ function updateDisplayedInvestment() {
 // Clear balance box after the invested amount is stored to the local storage
 function clearBalanceBox() {
     document.getElementById("balance-box").value = '';
-}
+};
+
+// Add an event listener to the 'Submit' button in the 'Add Trades' section.
+// Get the 'Profit/loss amount' entered by the user in the form.
+// Store in local storage the 'Total Profit/loss' amount, summarizing existing entries with all new entries.
+// Display the 'Total Profit/loss'.
+// Perform calculations and display the 'Current Balance'.
+// Perform calculations and display the '% Profit/loss'.
 

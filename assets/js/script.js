@@ -1,6 +1,6 @@
 // Ensure DOM is fully loaded before running Trading Tracker functions
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     // Locate all buttons with the "new-entry" class
     const allNewEntryButtons = document.getElementsByClassName("new-entry");
@@ -69,7 +69,7 @@ function storeBalance(amount) {
 
     // Call the function that displays the invested amount to reflect each investment update recorded in the local storage
     updateDisplayedInvestment();
-    
+
     // Call the function to clear the balance box once the investment amount is stored and displayed 
     clearBalanceBox();
 };
@@ -88,6 +88,7 @@ function clearBalanceBox() {
 
 // Add an event listener to the 'Submit' button in the 'Add Trades' section
 document.getElementById("add-trade-button").addEventListener("click", function () {
+    calculateTotalProfitLossAmount();
 });
 
 // Get the 'Profit/loss amount' entered by the user in the form
@@ -95,8 +96,18 @@ function getProfitLossAmount() {
     return parseFloat(document.getElementById("result").value);
 };
 
-// Store in local storage the 'Total Profit/loss' amount, summarizing existing entries with all new entries.
-// Display the 'Total Profit/loss'.
+// Store in local storage the 'Total Profit/loss' amount, summarizing existing entries with all new entries
+function calculateTotalProfitLossAmount() {
+    let enteredProfitLossAmount = getProfitLossAmount();
+    let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
+    currentProfitLossAmount += enteredProfitLossAmount;
+
+    // Update local storage upon new entry 
+    localStorage.setItem("tradingResult", currentProfitLossAmount);
+
+    // Display the 'Total Profit/loss'
+    document.getElementById("total-profit-loss").innerText = currentProfitLossAmount;
+};
+
 // Perform calculations and display the 'Current Balance'.
 // Perform calculations and display the '% Profit/loss'.
-

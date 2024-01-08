@@ -96,7 +96,7 @@ function getProfitLossAmount() {
     return parseFloat(document.getElementById("result").value);
 };
 
-// Store in local storage the 'Total Profit/loss' amount, summarizing existing entries with all new entries
+// Store in local storage the 'Total Profit/loss' amount, summarising existing entries with all new entries
 function calculateTotalProfitLossAmount() {
     let enteredProfitLossAmount = getProfitLossAmount();
     let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;

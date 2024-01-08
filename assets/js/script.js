@@ -86,7 +86,10 @@ function clearBalanceBox() {
     document.getElementById("balance-box").value = '';
 };
 
-// Add an event listener to the 'Submit' button in the 'Add Trades' section.
+// Add an event listener to the 'Submit' button in the 'Add Trades' section
+document.getElementById("add-trade-button").addEventListener("click", function () {
+});
+
 // Get the 'Profit/loss amount' entered by the user in the form.
 // Store in local storage the 'Total Profit/loss' amount, summarizing existing entries with all new entries.
 // Display the 'Total Profit/loss'.

@@ -90,7 +90,11 @@ function clearBalanceBox() {
 document.getElementById("add-trade-button").addEventListener("click", function () {
 });
 
-// Get the 'Profit/loss amount' entered by the user in the form.
+// Get the 'Profit/loss amount' entered by the user in the form
+function getProfitLossAmount() {
+    return parseFloat(document.getElementById("result").value);
+};
+
 // Store in local storage the 'Total Profit/loss' amount, summarizing existing entries with all new entries.
 // Display the 'Total Profit/loss'.
 // Perform calculations and display the 'Current Balance'.

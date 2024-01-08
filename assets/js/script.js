@@ -109,5 +109,14 @@ function calculateTotalProfitLossAmount() {
     document.getElementById("total-profit-loss").innerText = currentProfitLossAmount;
 };
 
-// Perform calculations and display the 'Current Balance'.
-// Perform calculations and display the '% Profit/loss'.
+// Perform calculations and display the 'Current Balance'
+function calculateCurrentBalance(currentInvestment, currentProfitLossAmount) {
+    let currentBalance = currentInvestment - currentProfitLossAmount;
+    document.getElementById("current-balance").innerText = currentBalance;
+}
+
+// Perform calculations and display the '% Profit/loss'
+function calculateProfitLossPercent(currentInvestment, currentProfitLossAmount) {
+    let profitLossPersent = Math.round((currentProfitLossAmount / currentInvestment)*100) + "%";
+    document.getElementById("profit-loss-percent").innerText = profitLossPersent;
+};

@@ -104,7 +104,7 @@ td {
 
 #add-balance,
 #withdraw-balance,
-.add-trade-button {
+#add-trade-button {
     background-color: #ceb4af;
     width: 80px;
     height: 30px;
@@ -185,7 +185,7 @@ td {
     /* Add on-hover effect on buttons */
         #add-balance:hover,
         #withdraw-balance:hover,
-        .add-trade-button:hover {
+        #add-trade-button:hover {
     background-color: #2b3c4b;
     border-color: #8a8fa1;
     color: #ceb4af;

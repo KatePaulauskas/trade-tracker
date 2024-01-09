@@ -144,8 +144,16 @@ function calculateCurrentBalance(currentInvestment, currentProfitLossAmount) {
 
 // Perform calculation for the '% Profit/loss' in the 'Summary' table
 function calculateProfitLossPercent(currentInvestment, currentProfitLossAmount) {
-	let profitLossPersent = Math.round((currentProfitLossAmount / currentInvestment) * 100) + "%";
-	document.getElementById("profit-loss-percent").innerText = profitLossPersent;
+	let profitLossPercent;
+
+	// Prevent division by zero
+	if (currentInvestment === 0) {
+		profitLossPercent = "NA";
+	} else {
+		profitLossPercent = Math.round((currentProfitLossAmount / currentInvestment) * 100) + "%";
+	}
+    // Display the result of the calculation 
+	document.getElementById("profit-loss-percent").innerText = profitLossPercent;
 };
 
 // Function to update 'Current Balance' and '% Profit/Loss'

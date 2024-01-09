@@ -109,9 +109,16 @@ function getProfitLossAmount() {
 
 // Store in local storage the 'Total Profit/loss' amount, summarising existing entries with all new entries
 function calculateTotalProfitLossAmount() {
-	let enteredProfitLossAmount = getProfitLossAmount();
-	let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
-	currentProfitLossAmount += enteredProfitLossAmount;
+    // Check if the form is valid. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
+	if (document.getElementById("add-trade").checkValidity()) {
+		// If form is valid, proceed with the existing logic
+	    let enteredProfitLossAmount = getProfitLossAmount();
+	    let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
+	    currentProfitLossAmount += enteredProfitLossAmount;
+	} else {
+    // If form is not valid, trigger error messages. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process        
+    document.getElementById("add-trade").reportValidity();
+	}
 
 	// Update local storage upon new entry 
 	localStorage.setItem("tradingResult", currentProfitLossAmount);

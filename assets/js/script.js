@@ -71,6 +71,7 @@ function investmentIsPositiveAmount(action) {
 		// Form is not valid, show an error message. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process        
 		document.getElementById("balance-box").reportValidity();
 	}
+	updateCurrentBalanceAndProfitLossPercent();
 };
 
 
@@ -115,19 +116,24 @@ function calculateTotalProfitLossAmount() {
 	    let enteredProfitLossAmount = getProfitLossAmount();
 	    let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
 	    currentProfitLossAmount += enteredProfitLossAmount;
+			
+	// Update local storage upon new entry 
+	localStorage.setItem("tradingResult", currentProfitLossAmount);
+
+	// Call the function to update the displayed profit/loss
+	updateProfitLoss();
+
 	} else {
     // If form is not valid, trigger error messages. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process        
     document.getElementById("add-trade").reportValidity();
 	}
-
-	// Update local storage upon new entry 
-	localStorage.setItem("tradingResult", currentProfitLossAmount);
 };
 
 // Display the 'Total Profit/loss'
 function updateProfitLoss() {
 	let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;	
 	document.getElementById("total-profit-loss").innerText = currentProfitLossAmount;
+	updateCurrentBalanceAndProfitLossPercent();
 };
 
 // Perform calculation for the 'Current Balance' in the 'Summary' table

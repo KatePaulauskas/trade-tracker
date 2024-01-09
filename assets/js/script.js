@@ -119,7 +119,7 @@ function calculateTotalProfitLossAmount() {
 
 // Perform calculation for the 'Current Balance' in the 'Summary' table
 function calculateCurrentBalance(currentInvestment, currentProfitLossAmount) {
-	let currentBalance = currentInvestment - currentProfitLossAmount;
+	let currentBalance = currentInvestment + currentProfitLossAmount;
 	document.getElementById("current-balance").innerText = currentBalance;
 }
 
@@ -129,14 +129,14 @@ function calculateProfitLossPercent(currentInvestment, currentProfitLossAmount) 
 	document.getElementById("profit-loss-percent").innerText = profitLossPersent;
 };
 
-// 
+// Function to update 'Current Balance' and '% Profit/Loss'
 
-function updateCurrentBalanceAndProfitLossPersent() {
+function updateCurrentBalanceAndProfitLossPercent() {
 	// Get from local storage the amout currently invested
 	let currentInvestment = parseFloat(localStorage.getItem("balance")) || 0;
 
 	// Get from local storage the current profit/loss amout
-	let currentProfitLossAmount = parseFloat(localStorage.setItem("tradingResult")) || 0;
+	let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
 
 	// Call the functions to recalculate the 'Current Balance' and '% Profit/Loss' every time entries are updated
 	calculateCurrentBalance(currentInvestment, currentProfitLossAmount);

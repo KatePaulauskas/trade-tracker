@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			collapsableEntryArea.style.display = collapsableEntryAreaIsHidden ? "block" : "none";
 		});
 	}
+	    updateDisplayedInvestment();
+		updateProfitLoss();
+		updateCurrentBalanceAndProfitLossPercent();
 });
 
 // Add event listeners to 'Add' and 'Withdraw' buttons
@@ -112,8 +115,11 @@ function calculateTotalProfitLossAmount() {
 
 	// Update local storage upon new entry 
 	localStorage.setItem("tradingResult", currentProfitLossAmount);
+};
 
-	// Display the 'Total Profit/loss'
+// Display the 'Total Profit/loss'
+function updateProfitLoss() {
+	let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;	
 	document.getElementById("total-profit-loss").innerText = currentProfitLossAmount;
 };
 
@@ -121,7 +127,7 @@ function calculateTotalProfitLossAmount() {
 function calculateCurrentBalance(currentInvestment, currentProfitLossAmount) {
 	let currentBalance = currentInvestment + currentProfitLossAmount;
 	document.getElementById("current-balance").innerText = currentBalance;
-}
+};
 
 // Perform calculation for the '% Profit/loss' in the 'Summary' table
 function calculateProfitLossPercent(currentInvestment, currentProfitLossAmount) {

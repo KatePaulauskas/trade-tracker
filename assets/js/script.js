@@ -10,18 +10,18 @@ document.addEventListener("DOMContentLoaded", function() {
 		button.addEventListener("click", function() {
 
 			// Target the next sibling elements (collapsible entry areas) in the DOM after buttons with the "new-entry" class
-			let collapsableEntryArea = this.nextElementSibling;
+			const collapsableEntryArea = this.nextElementSibling;
 
 			// Check if the collapsible entry areas are hidden (display is set to 'none')
-			let collapsableEntryAreaIsHidden = collapsableEntryArea.style.display === 'none';
+			const collapsableEntryAreaIsHidden = collapsableEntryArea.style.display === 'none';
 
 			// Display collapsible entry areas on buttons clicks if hidden; hide if shown
 			collapsableEntryArea.style.display = collapsableEntryAreaIsHidden ? "block" : "none";
 		});
 	}
-	    updateDisplayedInvestment();
-		updateProfitLoss();
-		updateCurrentBalanceAndProfitLossPercent();
+	updateDisplayedInvestment();
+	updateProfitLoss();
+	updateCurrentBalanceAndProfitLossPercent();
 });
 
 // Add event listeners to 'Add' and 'Withdraw' buttons
@@ -33,7 +33,7 @@ document.getElementById("withdraw-balance").addEventListener("click", function()
 	investmentIsPositiveAmount("withdraw");
 });
 
-// Get the investemnt amount entred by a user
+// Get the investment amount entred by a user
 function getInvestmentAmount() {
 	return parseFloat(document.getElementById("balance-box").value);
 }
@@ -110,28 +110,28 @@ function getProfitLossAmount() {
 
 // Store in local storage the 'Total Profit/loss' amount, summarising existing entries with all new entries
 function calculateTotalProfitLossAmount() {
-    // Check if the form is valid. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
+	// Check if the form is valid. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
 	if (document.getElementById("add-trade").checkValidity()) {
 		// If form is valid, proceed with the existing logic
-	    let enteredProfitLossAmount = getProfitLossAmount();
-	    let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
-	    currentProfitLossAmount += enteredProfitLossAmount;
-			
-	// Update local storage upon new entry 
-	localStorage.setItem("tradingResult", currentProfitLossAmount);
+		let enteredProfitLossAmount = getProfitLossAmount();
+		let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
+		currentProfitLossAmount += enteredProfitLossAmount;
 
-	// Call the function to update the displayed profit/loss
-	updateProfitLoss();
+		// Update local storage upon new entry 
+		localStorage.setItem("tradingResult", currentProfitLossAmount);
+
+		// Call the function to update the displayed profit/loss
+		updateProfitLoss();
 
 	} else {
-    // If form is not valid, trigger error messages. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process        
-    document.getElementById("add-trade").reportValidity();
+		// If form is not valid, trigger error messages. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process        
+		document.getElementById("add-trade").reportValidity();
 	}
 };
 
 // Display the 'Total Profit/loss'
 function updateProfitLoss() {
-	let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;	
+	let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
 	document.getElementById("total-profit-loss").innerText = currentProfitLossAmount;
 	updateCurrentBalanceAndProfitLossPercent();
 };
@@ -152,7 +152,7 @@ function calculateProfitLossPercent(currentInvestment, currentProfitLossAmount) 
 	} else {
 		profitLossPercent = Math.round((currentProfitLossAmount / currentInvestment) * 100) + "%";
 	}
-    // Display the result of the calculation 
+	// Display the result of the calculation 
 	document.getElementById("profit-loss-percent").innerText = profitLossPercent;
 };
 

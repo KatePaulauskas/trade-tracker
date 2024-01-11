@@ -108,12 +108,13 @@ input, input::placeholder {
     font-weight: 100;
     background-color: #ceb4af;
     width: 80px;
-    height: 30px;
+    height: 35px;
     color: #2b3c4b;
     border-style: double;
     border-radius: 15%;
     margin: 5px;
     line-height: 30px;
+    padding-bottom: 10px;
 }
 
 #withdraw-balance {
@@ -201,5 +202,10 @@ td {
     background-color: #2b3c4b;
     border-color: #8a8fa1;
     color: #ceb4af;
+    }
+    /* Add margins on the sides tothe 'Summary' table */
+    table {
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }

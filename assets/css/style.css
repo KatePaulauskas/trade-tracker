@@ -37,12 +37,19 @@ p {
 
 /* Apply font to all form elements */
 form,
-input,
 button,
 label {
     font-family: "Josefin Sans", sans-serif;
     color: #8a8fa1;
     font-size: 115%;
+}
+
+input, input::placeholder {
+    color: #535361;
+    font-size: 14px;
+    font-style: italic;
+    justify-content: center;
+    
 }
 
 /* Apply font to table elements */

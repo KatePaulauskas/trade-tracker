@@ -24,11 +24,26 @@ The site's primary goal is to help traders to keep a track of their trading prog
 
 ### Testing site features and behaviour
 
+Action/Feature          | Expected behavior       | Status         |
+|-------------------|-------------------------|----------------|
+|Enter site URL: <https://katepaulauskas.github.io/trade-tracker/> | Site page loads | Pass |
+|The form 'Balance add/withdraw' was tested on mobile and larger devices in multiple browsers |
+|Click 'Add' | 'Please fill in this field' appears in the input field | Pass |
+|Click 'Withdraw' | 'Please fill in this field' appears in the input field | Pass |
+|Enter a negative amount into the input field, click 'Add' | 'Enter a positive amount!' alert appears on the screen | Pass |
+|Enter a negative amount into the input field, click 'Withdraw' | 'Enter a positive amount!' alert appears on the screen | Pass |
+|Enter a positive amount into the input field, click 'Withdraw' | 'Cannot withdraw more than currently invested amount!' alert appears on the screen | Pass |
+|Enter a positive amount into the input field, click 'Add' | Total Investment and Current balance values are updated in the Summary table, the entered amount is displayed | Pass |
+|Enter a positive amount into the input field, but smaller or equal to the amount entered in the previous step, click 'Withdraw' | Total Investment and Current balance values are updated in the Summary table, the entered amount is subtracted | Pass |
+ 
+
+
+
 ### Validator Testing
 
 #### HTML
 
-In an attempt to adhere to web standards and accessibility, the site was submitted to [W3C validation testing](<https://validator.w3.org/nu/?doc=https%3A%2F%2Fkatepaulauskas.github.io%2Ftrade-tracker%2F>). No errors were identified. However, there were 18 warnings about trailing slash on void elements, which was fixed by removing the trailing slash and extra space.
+In an attempt to adhere to web standards and accessibility, the site was submitted to [W3C validation testing](<https://validator.w3.org/nu/?doc=https%3A%2F%2Fkatepaulauskas.github.io%2Ftrade-tracker%2F>). No errors were identified. However, there were 18 warnings about trailing slash on void elements, which were fixed by removing the trailing slash and extra space.
 
 
 
@@ -36,7 +51,7 @@ In an attempt to adhere to web standards and accessibility, the site was submitt
 
 To align with web standards and ensure accessability compliance CSS code of the site was submitted to [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fkatepaulauskas.github.io%2Faerial-photography%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en). One error was identified, as described below.
 
-- __Error 1:__ [Parse Error]()
+- __Error 1:__ [Parse Error](media/css-validation-error.jpeg)
   - Correction: The missing cirly bracket was added at the end of the media query for tablets and larger screens.
 
 #### JavaScript

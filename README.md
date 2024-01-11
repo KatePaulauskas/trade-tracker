@@ -28,9 +28,15 @@ The site's primary goal is to help traders to keep a track of their trading prog
 
 #### HTML
 
+In an attempt to adhere to web standards and accessibility, each page of the site was submitted to [W3C validation testing](<https://validator.w3.org/nu/?doc=https%3A%2F%2Fkatepaulauskas.github.io%2Ftrade-tracker%2F>).
+
 #### CSS
 
+To align with web standards and ensure accessability compliance CSS code of the site was submitted to [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fkatepaulauskas.github.io%2Faerial-photography%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en). 
+
 #### JavaScript
+
+
 
 ### Accessibility
 ![Desktop Initial Accessibility Test](media/lighthouse-desktop-initial.jpeg)

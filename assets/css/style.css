@@ -150,9 +150,11 @@ input, input::placeholder {
 /* Style Summary table */
 
 table {
-    width: 100%;
+    width: 90%;
     color: #8a8fa1;
     margin-top: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 table,
@@ -202,10 +204,5 @@ td {
     background-color: #2b3c4b;
     border-color: #8a8fa1;
     color: #ceb4af;
-    }
-    /* Add margins on the sides tothe 'Summary' table */
-    table {
-        margin-left: 50px;
-        margin-right: 50px;
     }
 }

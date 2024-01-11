@@ -54,16 +54,6 @@ input, input::placeholder {
     
 }
 
-/* Apply font to table elements */
-table,
-th,
-td {
-    font-family: "Josefin Sans", sans-serif;
-    color: #ceb4af;
-    font-size: 115%;
-    padding: 5px;
-}
-
 /* Style enty area */
 .entry-area {
     display: flex;
@@ -113,6 +103,9 @@ td {
 #add-balance,
 #withdraw-balance,
 #add-trade-button {
+    font-family: "Expletus Sans", sans-serif;
+    font-size: 80%;
+    font-weight: 100;
     background-color: #ceb4af;
     width: 80px;
     height: 30px;
@@ -164,6 +157,10 @@ table {
 table,
 th,
 td {
+    font-family: "Josefin Sans", sans-serif;
+    color: #ceb4af;
+    font-size: 115%;
+    padding: 5px;
     border: 1px solid #a3b0bf;
 }
 
@@ -190,6 +187,12 @@ td {
     .collapsable-entry-area {
         display: block;
     }
+
+    /* Increase font size on form buttons */
+    #add-balance,
+    #withdraw-balance,
+    #add-trade-button {
+    font-size: 100%;
     
     /* Add on-hover effect on buttons */
         #add-balance:hover,

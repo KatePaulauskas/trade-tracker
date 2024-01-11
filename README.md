@@ -35,8 +35,13 @@ Action/Feature          | Expected behavior       | Status         |
 |Enter a positive amount into the input field, click 'Withdraw' | 'Cannot withdraw more than currently invested amount!' alert appears on the screen | Pass |
 |Enter a positive amount into the input field, click 'Add' | Total Investment and Current balance values are updated in the Summary table, the entered amount is displayed | Pass |
 |Enter a positive amount into the input field, but smaller or equal to the amount entered in the previous step, click 'Withdraw' | Total Investment and Current balance values are updated in the Summary table, the entered amount is subtracted | Pass |
- 
-
+|The form 'Add new trade' was tested on mobile and larger devices in multiple browsers |
+|Click 'Add' | Please fill in this field' appears in the 'Open date' input field | Pass |
+|Fill out only the 'Open date' input field,and click 'Add' | Please fill in this field' appears in the 'Close date' input field | Pass |
+|Fill out the 'Open date' and 'Close date' fields only, and click 'Add' | Please fill in this field' appears in the 'Stock name' input field| Pass |
+|Fill out the 'Open date', 'Close date' and 'Stock name' fields only, and click 'Add' | Please fill in this field' appears in the 'Profit/loss amount' input field| Pass |
+|Fill out the 'Open date', 'Close date', 'Stock name' and 'Profit/loss amount' fields only, and click 'Add' | Please fill in this field' appears in the 'Comments' input field| Pass |
+|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' and 'Comments', click 'Add' | Summary table is updated | Pass |
 
 
 ### Validator Testing

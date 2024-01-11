@@ -62,3 +62,7 @@ The site's primary goal is to help traders to keep a track of their trading prog
 - Paired font families were downloaded from [Google Fonts](https://fonts.google.com/).
 - Site colors accessibility was checked using [Adobe Color Accessibility Tool](<https://color.adobe.com/>).
 - Icon displayed on the Home page was taken from [Iconify](https://iconify.design).
+- The instructions on the usage of the 'button' type on buttons to prevent submissions and set custom functionality were taken from the following source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button).
+- To ensure forms validation the Constraint validation was achieved using the Constraint Validation API described in the folloeing source:[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
+- The instructions on how to work with the local storage were taken from the following source: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/).
+

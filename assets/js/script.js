@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	for (let button of allNewEntryButtons) {
 
 		// Add a click event listener to each button with the "new-entry" class
-		button.addEventListener("click", function() {
+		// 'Click' event listener replaced with 'touchend' to test if it improves user experience on mobile. Source: https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events
+        button.addEventListener("touchend", function() {
 
 			// Target the next sibling elements (collapsible entry areas) in the DOM after buttons with the "new-entry" class
 			const collapsableEntryArea = this.nextElementSibling;

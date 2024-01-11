@@ -35,7 +35,7 @@ p {
     font-size: 140%;
 }
 
-/* Apply font to all form elements */
+/* Apply style to form elements */
 form,
 button,
 label {
@@ -43,6 +43,8 @@ label {
     color: #8a8fa1;
     font-size: 115%;
 }
+
+/* Apply style to input fields */
 
 input, input::placeholder {
     color: #535361;
@@ -104,7 +106,6 @@ td {
     margin: 10px;
     width: 200px;
     height: 27px;
-    font-size: 100%;
 }
 
 /* Style action buttons */
@@ -142,7 +143,8 @@ td {
 }
 
 #add-trade input {
-    width: 100%;
+    width: 200px;
+    height: 27px;
 }
 
 /* Hide collapsable entry areas on mobile */

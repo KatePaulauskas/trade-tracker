@@ -33,8 +33,14 @@ The site's primary goal is to help traders to keep a track of their trading prog
 #### JavaScript
 
 ### Accessibility
+![Desktop Initial Accessibility Test](media/lighthouse-desktop-initial.jpeg)
+![Mobile Initial Accessibility Testp](media/lighthouse-mobile-initial.jpeg)
+![Desktop Improved Accessibility Test](media/lighthouse-desktop-improved.jpeg)
+![Mobile Improved Accessibility Test](media/lighthouse-mobile-improved.jpeg)
 
 #### Site Colors Accessibility
+![Initial Color Palette](media/Initial-color-pallet.jpeg)
+![Improved Color Palette](media/new-color-pallet.jpeg)
 
 ### Solved Bugs
 

@@ -197,14 +197,14 @@ td {
     #withdraw-balance,
     #add-trade-button {
         font-size: 100%;
+    }
 
-        /* Add on-hover effect on buttons */
-        #add-balance:hover,
-        #withdraw-balance:hover,
-        #add-trade-button:hover {
-            background-color: #2b3c4b;
-            border-color: #8a8fa1;
-            color: #ceb4af;
-        }
+    /* Add on-hover effect on buttons */
+    #add-balance:hover,
+    #withdraw-balance:hover,
+    #add-trade-button:hover {
+        background-color: #2b3c4b;
+        border-color: #8a8fa1;
+        color: #ceb4af;
     }
 }

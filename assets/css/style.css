@@ -89,13 +89,13 @@ td {
 /* Style buttons to open Balance and New Trade sections */
 
 .new-entry {
-    background-color: #868289;
+    background-color: #ceb4af;
     width: 250px;
     height: 40px;
     margin: 30px 10px 10px;
     color: #2b3c4b;
     border-style: double;
-    border-color: #ceb4af;
+    border-color: #868289;
     border-radius: 5%;
     font-family: "Expletus Sans", sans-serif;
 }

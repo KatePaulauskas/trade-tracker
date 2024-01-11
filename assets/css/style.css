@@ -45,12 +45,13 @@ label {
 
 /* Apply style to input fields */
 
-input, input::placeholder {
+input,
+input::placeholder {
     color: #535361;
     font-size: 14px;
     font-style: italic;
     justify-content: center;
-    
+
 }
 
 /* Style enty area */
@@ -195,14 +196,14 @@ td {
     #add-balance,
     #withdraw-balance,
     #add-trade-button {
-    font-size: 100%;
-    
-    /* Add on-hover effect on buttons */
+        font-size: 100%;
+
+        /* Add on-hover effect on buttons */
         #add-balance:hover,
         #withdraw-balance:hover,
         #add-trade-button:hover {
-    background-color: #2b3c4b;
-    border-color: #8a8fa1;
-    color: #ceb4af;
+            background-color: #2b3c4b;
+            border-color: #8a8fa1;
+            color: #ceb4af;
+        }
     }
-}

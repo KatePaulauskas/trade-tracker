@@ -24,6 +24,14 @@ The site's primary goal is to help traders to keep a track of their trading prog
 
 ### Testing site features and behaviour
 
+During testing, it was identified that two additional rules need to be implemented to help users accurately monitor their trading progress:
+
+1. Users should be prevented from adding a new trade, whether positive or negative, if a balance has not been entered.
+
+2. Users should be prevented from entering a negative amount for a new trade if this amount exceeds the invested amount, as in real-world scenarios, the broker would typically intervene and prevent the user from going into negative balance. Unless the user is a professional trader, however, if he is, he would be seeking for more advanced capabilities than the  current Trade Tracker can offer.
+
+
+
 Action/Feature          | Expected behavior       | Status         |
 |-------------------|-------------------------|----------------|
 |Enter site URL: <https://katepaulauskas.github.io/trade-tracker/> | Site page loads | Pass |
@@ -32,16 +40,19 @@ Action/Feature          | Expected behavior       | Status         |
 |Click 'Withdraw' | 'Please fill in this field' appears in the input field | Pass |
 |Enter a negative amount into the input field, click 'Add' | 'Enter a positive amount!' alert appears on the screen | Pass |
 |Enter a negative amount into the input field, click 'Withdraw' | 'Enter a positive amount!' alert appears on the screen | Pass |
-|Enter a positive amount into the input field, click 'Withdraw' | 'Cannot withdraw more than currently invested amount!' alert appears on the screen | Pass |
-|Enter a positive amount into the input field, click 'Add' | Total Investment and Current balance values are updated in the Summary table, the entered amount is displayed | Pass |
-|Enter a positive amount into the input field, but smaller or equal to the amount entered in the previous step, click 'Withdraw' | Total Investment and Current balance values are updated in the Summary table, the entered amount is subtracted | Pass |
+|Enter a positive amount into the input field, click 'Withdraw' | 'Cannot withdraw more than the currently invested amount!' alert appears on the screen | Pass |
+|Enter a positive amount into the input field, click 'Add' | 'Total investment' and 'Current balance' values are updated in the 'Summary' table, displaying the entered amount | Pass |
+|Enter a positive amount into the input field, but smaller or equal to the amount entered in the previous step, click 'Withdraw' | 'Total investment' and 'Current balance' values are updated in the Summary table, the entered amount is subtracted | Pass |
 |The form 'Add new trade' was tested on mobile and larger devices in multiple browsers |
 |Click 'Add' | Please fill in this field' appears in the 'Open date' input field | Pass |
-|Fill out only the 'Open date' input field,and click 'Add' | Please fill in this field' appears in the 'Close date' input field | Pass |
+|Fill out only the 'Open date' input field, and click 'Add' | Please fill in this field' appears in the 'Close date' input field | Pass |
 |Fill out the 'Open date' and 'Close date' fields only, and click 'Add' | Please fill in this field' appears in the 'Stock name' input field| Pass |
-|Fill out the 'Open date', 'Close date' and 'Stock name' fields only, and click 'Add' | Please fill in this field' appears in the 'Profit/loss amount' input field| Pass |
-|Fill out the 'Open date', 'Close date', 'Stock name' and 'Profit/loss amount' fields only, and click 'Add' | Please fill in this field' appears in the 'Comments' input field| Pass |
-|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' and 'Comments', click 'Add' | Summary table is updated | Pass |
+|Fill out the 'Open date', 'Close date' and 'Stock name' fields only, and click 'Add' | Please fill in this field' appears in the 'Profit/loss amount' input field | Pass |
+|Fill out the 'Open date', 'Close date', 'Stock name' and 'Profit/loss amount' fields only, and click 'Add' | Please fill in this field' appears in the 'Comments' input field | Pass |
+|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use positive amount) and 'Comments', click 'Add' | If the balance was not entered in the 'Balance add/withdraw' form, only 'Current balance' and 'Total profit/loss' values are updated in the 'Summary' table. If the balance was entered in the 'Balance add/withdraw', 3 values are calculated and updated in the 'Summary' table: 'Current balance' 'Total profit/loss', '% profit/loss' | Pass |
+|Enter a positive amount into the input field of the 'Balance add/withdraw' form after successfully adding a trade through the 'Add new trade' form, click 'Add' on the 'Balance add/withdraw' form | Three values in the 'Summary' table are updated based on the new entry: 'Total investment', 'Current balance', and '% profit/loss' by adding the entered amount to the 'Total investment' and performing calculation based on the new value for the remaining two fields | Pass |
+
+
 
 
 ### Validator Testing

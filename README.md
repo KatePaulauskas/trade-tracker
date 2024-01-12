@@ -24,11 +24,14 @@ The site's primary goal is to help traders to keep a track of their trading prog
 
 ### Testing site features and behaviour
 
-During testing, it was identified that two additional rules need to be implemented to help users accurately monitor their trading progress:
+During testing, it was identified that three additional rules need to be implemented to help users accurately monitor their trading progress:
 
 1. Users should be prevented from adding a new trade, whether positive or negative, if a balance has not been entered.
 
-2. Users should be prevented from entering a negative amount for a new trade if this amount exceeds the invested amount, as in real-world scenarios, the broker would typically intervene and prevent the user from going into negative balance. Unless the user is a professional trader, however, if he is, he would be seeking for more advanced capabilities than the  current Trade Tracker can offer.
+2. Users should be prevented from entering a negative amount (loss) for a new trade if this amount exceeds the 'Current balance', as in real-world scenarios, the broker would typically intervene and prevent the user from going into negative balance. Unless the user is a professional trader, however, if he is, he would be seeking for more advanced capabilities than the  current Trade Tracker can offer.
+
+3. When a user attempts to withdraw balance, it has to be withdrawn from the 'Current balance'. If the current balance is at zero, the withdrawal amount has to be deducted from the 'Invested amount'.
+
 
 
 
@@ -50,7 +53,11 @@ Action/Feature          | Expected behavior       | Status         |
 |Fill out the 'Open date', 'Close date' and 'Stock name' fields only, and click 'Add' | Please fill in this field' appears in the 'Profit/loss amount' input field | Pass |
 |Fill out the 'Open date', 'Close date', 'Stock name' and 'Profit/loss amount' fields only, and click 'Add' | Please fill in this field' appears in the 'Comments' input field | Pass |
 |Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use positive amount) and 'Comments', click 'Add' | If the balance was not entered in the 'Balance add/withdraw' form, only 'Current balance' and 'Total profit/loss' values are updated in the 'Summary' table. If the balance was entered in the 'Balance add/withdraw', 3 values are calculated and updated in the 'Summary' table: 'Current balance' 'Total profit/loss', '% profit/loss' | Pass |
-|Enter a positive amount into the input field of the 'Balance add/withdraw' form after successfully adding a trade through the 'Add new trade' form, click 'Add' on the 'Balance add/withdraw' form | Three values in the 'Summary' table are updated based on the new entry: 'Total investment', 'Current balance', and '% profit/loss' by adding the entered amount to the 'Total investment' and performing calculation based on the new value for the remaining two fields | Pass |
+|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the balance was not entered in the 'Balance add/withdraw' form, alert message appears: 'First enter balance! Cannot add trades without having a positive balance!' | Pass |
+|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the balance was not entered in the 'Balance add/withdraw' form, alert message appears: 'First enter balance! Cannot add trades without having a positive balance!' | Pass |
+|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the balance was entered in the 'Balance add/withdraw', and the negative amount of the trade exceeds 'Current balance', aler message appears: 'The loss amount cannot exceed the Current balance, please check your entry!' | Pass |
+|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the balance was entered in the 'Balance add/withdraw', and the negative amount of the trade is equal or smaller than 'Current balance', the negative amount of the trade is deducted from 'Current Balance' and displaid in the 'Summary' table, 'Total profit/loss' and '% profit/loss' are recalculated based on the new value of the 'Current balance' | Pass |
+|Enter an amount into the input field of the 'Balance add/withdraw' form after successfully adding a trade through the 'Add new trade' form, click 'Add' on the 'Balance add/withdraw' form | Three values in the 'Summary' table are updated based on the new entry: 'Total investment', 'Current balance', and '% profit/loss' by adding the entered amount to the 'Total investment' and performing calculation based on the new value for the remaining two fields | Pass |
 
 
 

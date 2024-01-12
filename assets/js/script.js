@@ -58,7 +58,7 @@ function investmentIsPositiveAmount(action) {
 				if (currentInvestment >= amount) {
 					currentInvestment -= amount;
 				} else {
-					alert("Cannot withdraw more than currently invested amount!");
+					alert("Cannot withdraw more than the currently invested amount!");
 					return;
 				}
 			}
@@ -111,24 +111,29 @@ function getProfitLossAmount() {
 
 // Store in local storage the 'Total Profit/loss' amount, summarising existing entries with all new entries
 function calculateTotalProfitLossAmount() {
-	// Check if the form is valid. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
-	if (document.getElementById("add-trade").checkValidity()) {
-		// If form is valid, proceed with the existing logic
-		let enteredProfitLossAmount = getProfitLossAmount();
-		let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
-		currentProfitLossAmount += enteredProfitLossAmount;
+    // Check if the form is valid. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
+    if (document.getElementById("add-trade").checkValidity()) {
+        if (document.getElementById("total-investment").innerText === '0') {
+            alert("First enter balance! Cannot add trades without having a positive balance!");
+            return;
+        } else {
+            // If form is valid and balance is entered, proceed with the existing logic
+            let enteredProfitLossAmount = getProfitLossAmount();
+            let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
+            currentProfitLossAmount += enteredProfitLossAmount;
 
-		// Update local storage upon new entry 
-		localStorage.setItem("tradingResult", currentProfitLossAmount);
+            // Update local storage upon new entry 
+            localStorage.setItem("tradingResult", currentProfitLossAmount);
 
-		// Call the function to update the displayed profit/loss
-		updateProfitLoss();
-
-	} else {
-		// If form is not valid, trigger error messages. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process        
-		document.getElementById("add-trade").reportValidity();
-	}
+            // Call the function to update the displayed profit/loss
+            updateProfitLoss();
+        }
+    } else {
+        // If form is not valid, trigger error messages. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process        
+        document.getElementById("add-trade").reportValidity();
+    }
 };
+
 
 // Display the 'Total Profit/loss'
 function updateProfitLoss() {

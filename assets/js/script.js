@@ -109,17 +109,23 @@ function getProfitLossAmount() {
 	return parseFloat(document.getElementById("result").value);
 };
 
-// Store in local storage the 'Total Profit/loss' amount, summarising existing entries with all new entries
+// Store in local storage the 'Total profit/loss' amount, summarising existing entries with all new entries
 function calculateTotalProfitLossAmount() {
-    // Check if the form is valid. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process
+    // Check if the form is valid
     if (document.getElementById("add-trade").checkValidity()) {
         if (document.getElementById("total-investment").innerText === '0') {
             alert("First enter balance! Cannot add trades without having a positive balance!");
             return;
         } else {
-            // If form is valid and balance is entered, proceed with the existing logic
+            // If form is valid and balance is entered, proceed with the following logic
             let enteredProfitLossAmount = getProfitLossAmount();
             let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
+            if (enteredProfitLossAmount < 0) {
+                if (parseFloat(document.getElementById("current-balance").innerText) + enteredProfitLossAmount < 0) {
+                    alert("The loss amount cannot exceed the Current balance, please check your entry!");
+                    return;
+                }
+            }
             currentProfitLossAmount += enteredProfitLossAmount;
 
             // Update local storage upon new entry 
@@ -129,10 +135,11 @@ function calculateTotalProfitLossAmount() {
             updateProfitLoss();
         }
     } else {
-        // If form is not valid, trigger error messages. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process        
+        // If form is not valid, trigger error messages. 
         document.getElementById("add-trade").reportValidity();
     }
 };
+
 
 
 // Display the 'Total Profit/loss'

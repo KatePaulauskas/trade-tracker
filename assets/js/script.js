@@ -46,7 +46,7 @@ function investmentIsPositiveAmount(action) {
 		// Form is valid, proceed with the existing logic
 		let amount = getInvestmentAmount();
 		// Get stored investment from the local storage, or display 'zero' if no data stored
-		let currentInvestment = parseFloat(localStorage.getItem("balance")) || 0;
+		let currentInvestment = parseFloat(localStorage.getItem("investmentResult")) || 0;
 
 		if (amount > 0) {
 			if (action === "add") {
@@ -78,7 +78,7 @@ function investmentIsPositiveAmount(action) {
 
 // Function to update the local storage balance. Source: https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/
 function storeBalance(amount) {
-	localStorage.setItem("balance", amount);
+	localStorage.setItem("investmentResult", amount);
 
 	// Call the function that displays the invested amount to reflect each investment update recorded in the local storage
 	updateDisplayedInvestment();
@@ -90,7 +90,7 @@ function storeBalance(amount) {
 
 // Display the invested amount
 function updateDisplayedInvestment() {
-	let currentInvestment = parseFloat(localStorage.getItem("balance")) || 0;
+	let currentInvestment = parseFloat(localStorage.getItem("investmentResult")) || 0;
 	document.getElementById("total-investment").innerText = currentInvestment;
 };
 
@@ -173,7 +173,7 @@ function calculateProfitLossPercent(currentInvestment, currentProfitLossAmount) 
 
 function updateCurrentBalanceAndProfitLossPercent() {
 	// Get from local storage the amout currently invested
-	let currentInvestment = parseFloat(localStorage.getItem("balance")) || 0;
+	let currentInvestment = parseFloat(localStorage.getItem("investmentResult")) || 0;
 
 	// Get from local storage the current profit/loss amout
 	let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;

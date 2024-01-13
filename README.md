@@ -20,6 +20,15 @@ The site's primary goal is to help traders to keep a track of their trading prog
 
 ### Features Left to Implement
 
+The following features could be implemented to further advance the Trade Tracker functionality and improve user experience:
+
+1. Display a log of investments along with their respective dates.
+2. Add an option to withdraw from the current balance.
+3. Introduce a reset button to start the trading journal from scratch.
+4. Display negative numbers in a different color (red) for clarity.
+5. Show alerts when the % profit/loss is negative. Offer suggestions to change or improve the trading strategy, and recommend articles and educational videos on strategy improvement.
+6. Offer data storage on the backend. Add a login bar for the members' area, allowing the Trade Tracker to be accessed through any browser. Users can log into their accounts and access their records.
+
 ## Testing
 
 ### Testing site features and behaviour

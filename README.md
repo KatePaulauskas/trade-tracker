@@ -41,10 +41,6 @@ During testing, it was identified that two additional rules need to be implement
 
 During testing, it was determined that the withdraw function falls outside the scope of the current project. Implementing such a feature would be more relevant in a more complex application, where it's possible to demonstrate in detail the impact of withdrawals on the balance and other parameters. In its current form, the withdraw function seemed to negatively influence the summary table and required a deeper analysis of user actions, which exceeds the scope of the current project. To maintain focus and clarity, and to make things simple and clear, the 'Withdraw' button has been removed from the Investment form.
 
-
-
-
-
 Action/Feature          | Expected behavior       | Status         |
 |-------------------|-------------------------|----------------|
 |Enter site URL: <https://katepaulauskas.github.io/trade-tracker/> | Site page loads | Pass |
@@ -63,9 +59,6 @@ Action/Feature          | Expected behavior       | Status         |
 |Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use positive amount) and 'Comments', click 'Add' | If the investment was entered in the 'Add investment' form, 3 values are calculated and updated in the 'Summary' table: 'Current balance' 'Total profit/loss', '% profit/loss' | Pass |
 |Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the investment was entered in the 'Add investment' form, and the negative/loss amount of the trade exceeds the 'Current balance' amount, the following alert appears: 'The loss amount cannot exceed the Current balance, please check your entry!' | Pass |
 |Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the investment was entered in the 'Add investment' form, and the negative/loss amount of the trade does not exceed the 'Current balance', the amount is deducted from the 'Current balance' field, 'Total investment'and '% profit/loss' are recalculated and updated accordingly | Pass |
-
-
-
 
 
 ### Validator Testing
@@ -89,14 +82,51 @@ In an attempt to adhere to web standards and accessibility, the JavaScript code 
 
 
 ### Accessibility
-![Desktop Initial Accessibility Test](media/lighthouse-desktop-initial.jpeg)
+
+To ensure the accessibility requirements are met for the current project, the Lighthouse testing was done for mobile and desktop versions of the site.
+
+- Mobile
+
+Initially, the test returned the score of 91 for Accessibility on mobile. Performance was indicated at 99, and the rest of indicators: Best Practices and SEO got the score of 100. 
+
 ![Mobile Initial Accessibility Testp](media/lighthouse-mobile-initial.jpeg)
-![Desktop Improved Accessibility Test](media/lighthouse-desktop-improved.jpeg)
+
+In attempt to improve the Accessibility score on mobile the background color of the buttons to open 'Investment' and 'New Trade' sections was changed to improve the contrast between the text buttons background color. 
+
+As a result, Accessibility was improved and resulted in the score of 100: 
+
 ![Mobile Improved Accessibility Test](media/lighthouse-mobile-improved.jpeg)
+ on mobile, to increase contrast and improve accessibility.
+
+
+- Desktop
+
+The Lighthouse test also indicated issues with the Acccessibility score on desktop displaying it at 89. With the rest of the indicators being at 100:
+
+![Desktop Initial Accessibility Test](media/lighthouse-desktop-initial.jpeg)
+
+In attempt to improve the Accessibility score on desktop, a darker shade was chosen for the label elements text on the forms.
+
+ Also, the order of headings in the HTML file was improved. 
+
+As a result, Accessibility on desktop was improved and resulted in the score of 100:
+
+![Desktop Improved Accessibility Test](media/lighthouse-desktop-improved.jpeg)
 
 #### Site Colors Accessibility
-![Initial Color Palette](media/initial-color-pallet.jpeg)
-![Improved Color Palette](media/new-color-pallet.jpeg)
+
+The color palette for the site was selected using [Colormind tool](http://colormind.io/):
+
+![Initial Color Palette](media/initial-color-pallete.jpeg)
+
+However, after running test to check the site text colors against their backgrounds for contrast using the Adobe Color [Contrast Checker](https://color.adobe.com/), an issue was identified with one of the colors: 
+
+![Contrast Checker: gray on white](media/48B273CF-E2AC-4F03-A399-7D21011D4817_1_201_a.jpeg)
+
+Therefore a darker shade was chosen and the color #868289 was replaced with 535361:
+
+![Improved Color Palette](media/new-color-pallete.jpeg)
+
 
 ### Solved Bugs
 
@@ -121,6 +151,7 @@ In an attempt to adhere to web standards and accessibility, the JavaScript code 
 
 - [Balsamiq Studios software](https://balsamiq.com/wireframes/) was used to create mockup wireframe for the current project.
 - To select the fonts for the site, a font pairing service was used: [Font Joy](https://fontjoy.com/).
+- The color palette for the site was selected using [Colormind tool](http://colormind.io/):
 - Paired font families were downloaded from [Google Fonts](https://fonts.google.com/).
 - Site colors accessibility was checked using [Adobe Color Accessibility Tool](<https://color.adobe.com/>).
 - Icon displayed on the Home page was taken from [Iconify](https://iconify.design).

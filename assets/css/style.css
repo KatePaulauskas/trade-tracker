@@ -60,8 +60,8 @@ input::placeholder {
     flex-direction: column;
 }
 
-/* Style Balance and Add Trades Sections */
-.update-balance,
+/* Style Investment and Add Trades Sections */
+.update-investment,
 .add-trades {
     display: flex;
     flex-direction: column;
@@ -69,14 +69,14 @@ input::placeholder {
     width: 100%;
 }
 
-/* Hide Balance and New Trade headings */
+/* Hide Investment and New Trade headings */
 
-.balance,
+.investment,
 .new-trade {
     display: none;
 }
 
-/* Style buttons to open Balance and New Trade sections */
+/* Style buttons to open Investment and New Trade sections */
 
 .new-entry {
     background-color: #ceb4af;
@@ -91,9 +91,9 @@ input::placeholder {
     font-size: 120%;
 }
 
-/* Style Balance Section input field */
+/* Style Investment Section input field */
 
-#balance-box {
+#investment-box {
     margin: 10px;
     width: 200px;
     height: 27px;
@@ -101,8 +101,7 @@ input::placeholder {
 
 /* Style action buttons */
 
-#add-balance,
-#withdraw-balance,
+#add-investment,
 #add-trade-button {
     font-family: "Expletus Sans", sans-serif;
     font-size: 100%;
@@ -118,17 +117,13 @@ input::placeholder {
     padding-bottom: 10px;
 }
 
-#withdraw-balance {
-    width: 130px;
-}
-
-.update-balance .balance-action-buttons {
+.update-investment .investment-action-buttons {
     display: flex;
 }
 
 /* Style Add New Trade form */
 
-#add-trade {
+#investment-form, #add-trade {
     margin-top: 10px;
     font-size: 100%;
     display: flex;
@@ -177,13 +172,13 @@ td {
         align-items: start;
     }
 
-    /* Display Balance and New Trade headings */
-    .balance,
+    /* Display iInvestment and New Trade headings */
+    .investment,
     .new-trade {
         display: block;
     }
 
-    /* Hide buttons to open Balance and New Trade sections */
+    /* Hide buttons to open Investment and New Trade sections */
     .new-entry {
         display: none;
     }
@@ -193,15 +188,13 @@ td {
     }
 
     /* Increase font size on form buttons */
-    #add-balance,
-    #withdraw-balance,
+    #add-investment,
     #add-trade-button {
         font-size: 100%;
     }
 
     /* Add on-hover effect on buttons */
-    #add-balance:hover,
-    #withdraw-balance:hover,
+    #add-investment:hover,
     #add-trade-button:hover {
         background-color: #2b3c4b;
         border-color: #8a8fa1;

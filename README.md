@@ -61,6 +61,7 @@ The following features could be implemented to further advance the Trade Tracker
 5. Display negative numbers in a different color (red) for clarity.
 6. Show alerts when the % profit/loss is negative. Offer suggestions to change or improve the trading strategy, and recommend articles and educational videos on strategy improvement.
 7. Offer data storage on the backend. Add a login bar for the members' area, allowing the Trade Tracker to be accessed through any browser. Users can log into their accounts and access their records.
+8. Provide a dropdown menu for users to choose their preferred currency for display, ensuring that values are shown in a monetary format rather than as plain numbers.
 
 ## Testing
 
@@ -124,7 +125,7 @@ Initially, the test returned the score of 91 for Accessibility on mobile. Perfor
 
 ![Mobile Initial Accessibility Testp](media/lighthouse-mobile-initial.jpeg)
 
-In attempt to improve the Accessibility score on mobile the background color of the buttons to open 'Investment' and 'New Trade' sections was changed to improve the contrast between the text buttons background color. 
+In attempt to improve the Accessibility score on mobile the background color of the buttons to open 'Investment' and 'New Trade' sections was changed to improve the contrast between the text on the buttons and their colors. 
 
 As a result, Accessibility was improved and resulted in the score of 100: 
 
@@ -134,11 +135,11 @@ As a result, Accessibility was improved and resulted in the score of 100:
 
 - Desktop
 
-The Lighthouse test also indicated issues with the Acccessibility score on desktop displaying it at 89. With the rest of the indicators being at 100:
+The Lighthouse test also indicated issues with the Accessibility score on desktop displaying it at 89. With the rest of the indicators being at 100:
 
 ![Desktop Initial Accessibility Test](media/lighthouse-desktop-initial.jpeg)
 
-In attempt to improve the Accessibility score on desktop, a darker shade was chosen for the label elements text on the forms.
+In an attempt to improve the Accessibility score on desktop, a darker shade was chosen to display labels on the forms' input fields.
 
  Also, the order of headings in the HTML file was improved. 
 
@@ -156,11 +157,11 @@ However, after running the test to check the site text and icon colors against t
 
 ![Contrast Checker: gray on white](media/contrast-checker-gray-on-white.jpeg)
 
-Therefore a darker shade was chosen and the color #868289 was replaced with #535361:
+Therefore a darker shade was chosen and the color #868289, which was used was used to display labels on the site's forms, was replaced with #535361:
 
 ![Improved Color Palette](media/new-color-pallete.jpeg)
 
-The rest of the testings on the contrast between text colors against their backgrounds with the [Adoby Color Contrast Checker](https://color.adobe.com/create/color-contrast-analyzer) returned positive results.
+The rest of the tests on the contrast between text colors against their backgrounds with the [Adoby Color Contrast Checker](https://color.adobe.com/create/color-contrast-analyzer) returned positive results.
 
 Beige color on dark-blue background:
 
@@ -174,7 +175,7 @@ Dark-blue color on beige background:
 
 ![Dark-blue on beige](media/contrast-checker-dark-blue-on-beige.jpeg)
 
-The site colors were also checked for accessibility to ensure they are color-blind safe using the [Adoby Color accessinility tool](https://color.adobe.com/create/color-accessibility), which returned the following result :'No conflicts found. Swatches are color blind safe':
+The site colors were also checked for accessibility to ensure they are color-blind safe using the [Adoby Color accessibility tool](https://color.adobe.com/create/color-accessibility), which returned the following result :'No conflicts found. Swatches are color blind safe':
 
 ![Color blind safe test](media/color-blind-test.jpeg)
 

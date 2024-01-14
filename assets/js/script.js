@@ -169,3 +169,13 @@ function updateCurrentBalanceAndProfitLossPercent() {
 	calculateCurrentBalance(currentInvestment, currentProfitLossAmount);
 	calculateProfitLossPercent(currentInvestment, currentProfitLossAmount);
 };
+
+// Create an object to store trade details in local storage
+
+let tradeData = {
+	openDate: document.getElementById("open-date").value,
+	closeDate: document.getElementById("close-date").value,
+	stockName: document.getElementById("stock").value,
+	result: document.getElementById("result").value,
+	comments: document.getElementById("comments").value,
+};

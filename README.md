@@ -8,25 +8,27 @@ The site's primary goal is to help traders to keep a track of their trading prog
 
 ![Responsive Mockup]()
 
-## Features
-
-### Project Structure
-
 ### Design
 
-#### Color pallette
+#### Project wireframe
+
+The layout of the Trade Tracker application was initially developed using Balsamiq Studios software, through which a mockup wireframe was created for the current project:
+
+![Trade Tracker wireframe](media/wireframe.jpeg)
+
+#### Color palette
 
 The colors for Trade tracker were carefully selected using [Colormind tool](http://colormind.io/) to create a balanced, sophisticated palette that is both professional and user-friendly. The blend of warm and cool tones, along with the varying intensities of color, makes the site look modern, trustworthy, and accessible, creating the feeling of confidence and comfort.
 
 ![Improved Color Palette](media/new-color-pallete.jpeg)
 
-- #2B3C4D: This color was chosen for the site background and buttons text. It is a deep, dark blue, almost navy color, very strong and authoritative, associated with expertise and stability. It helps to establish the site as a serious and professional tool for trading.
+- **#2B3C4D:** This color was chosen for the site background and buttons text. It is a deep, dark blue, almost navy color, very strong and authoritative, associated with expertise and stability. It helps to establish the site as a serious and professional tool for trading.
 
-- #CEB4AF: This color is the second main color and is used for the main heading, buttons' background, and text in the summary table. This color is a soft, warm beige. It adds a touch of elegance and warmth, balancing the cooler tones of the palette. It helps to make the site feel more welcoming, especially to users new to trading.
+- **#CEB4AF:** This color is the second main color and is used for the main heading, buttons' background, and text in the summary table. This color is a soft, warm beige. It adds a touch of elegance and warmth, balancing the cooler tones of the palette. It helps to make the site feel more welcoming, especially to users new to trading.
 
-- #A3B0BF: This color is used for H2, H3, and paragraph colors. It adds a sense of calm and approachability to the website.
+- **#A3B0BF:** This color is used for H2, H3, and paragraph colors. It adds a sense of calm and approachability to the website.
 
-- #535361 & #8A8FA1: The remaining two colors are used for smaller elements on the site, for instance, labels' text color on the forms, table design, buttons' background on hover, etc., and help to add the final touch to the entire palette and ensure the site looks professional, reliable, accessible, and welcoming.
+- **#535361 & #8A8FA1:** The remaining two colors are used for smaller elements on the site, for instance, labels' text color on the forms, table design, buttons' background on hover, etc., and help to add the final touch to the entire palette and ensure the site looks professional, reliable, accessible, and welcoming.
 
 #### Fonts
 
@@ -35,27 +37,30 @@ The fonts for the site were selected using font pairing service [Font Joy](https
 ![Font Paring](media/fonts.png)
 
 
- - Averia Gruesa Libre is a bold and slightly playful font. Its uniqueness lies in its hand-drawn style, which adds a personal and friendly  touch to the Trade Tracker site. Using it for H1 heading ensures that it stands out and grabs attention, making the site feel more welcoming.
+ - **Averia Gruesa Libre** is a bold and slightly playful font. Its uniqueness lies in its hand-drawn style, which adds a personal and friendly  touch to the Trade Tracker site. Using it for H1 heading ensures that it stands out and grabs attention, making the site feel more welcoming.
 
-- Expletus Sans is a decorative and playful font. It has a unique character, with a lively and approachable appearance. This font was chosen for H2 and H3 headings to maintain readability while adding a touch of personality. 
+- **Expletus Sans** is a decorative and playful font. It has a unique character, with a lively and approachable appearance. This font was chosen for H2 and H3 headings to maintain readability while adding a touch of personality. 
 
-- Josefin Sans is a clean, simple and elegant font. It is straightforward and classy, making it a great choice for paragraph text where readability is key. Its simplicity complements the more decorative nature of the other two fonts, ensuring that the  site remains sharp and professional.
+- **Josefin Sans** is a clean, simple and elegant font. It is straightforward and classy, making it a great choice for paragraph text where readability is key. Its simplicity complements the more decorative nature of the other two fonts, ensuring that the  site remains sharp and professional.
 
+
+## Features
 
 ### Existing Features
 
-####
+#### 
 
 ### Features Left to Implement
 
 The following features could be implemented to further advance the Trade Tracker functionality and improve user experience:
 
-1. Display a log of investments along with their respective dates.
-2. Add an option to withdraw from the current balance.
-3. Introduce a reset button to start the trading journal from scratch.
-4. Display negative numbers in a different color (red) for clarity.
-5. Show alerts when the % profit/loss is negative. Offer suggestions to change or improve the trading strategy, and recommend articles and educational videos on strategy improvement.
-6. Offer data storage on the backend. Add a login bar for the members' area, allowing the Trade Tracker to be accessed through any browser. Users can log into their accounts and access their records.
+1. Initially in the wireframe, a chart showing progress over time was presented. However, due to time constraints and the complexity of the setup, it was decided to move it under future features and replace it with a table of entered trades.
+2. Display a log of investments along with their respective dates.
+3. Add an option to withdraw from the current balance.
+4. Introduce a reset button to start the trading journal from scratch.
+5. Display negative numbers in a different color (red) for clarity.
+6. Show alerts when the % profit/loss is negative. Offer suggestions to change or improve the trading strategy, and recommend articles and educational videos on strategy improvement.
+7. Offer data storage on the backend. Add a login bar for the members' area, allowing the Trade Tracker to be accessed through any browser. Users can log into their accounts and access their records.
 
 ## Testing
 
@@ -147,15 +152,15 @@ The color palette for the site was selected using [Colormind tool](http://colorm
 
 ![Initial Color Palette](media/initial-color-pallete.jpeg)
 
-However, after running test to check the site text colors against their backgrounds for contrast using the Adobe Color [Contrast Checker](https://color.adobe.com/), an issue was identified with one of the colors: 
+However, after running the test to check the site text and icon colors against their backgrounds for contrast using the [Adoby Color Contrast Checker](https://color.adobe.com/create/color-contrast-analyzer), an issue was identified with one of the colors: 
 
 ![Contrast Checker: gray on white](media/contrast-checker-gray-on-white.jpeg)
 
-Therefore a darker shade was chosen and the color #868289 was replaced with 535361:
+Therefore a darker shade was chosen and the color #868289 was replaced with #535361:
 
 ![Improved Color Palette](media/new-color-pallete.jpeg)
 
-The rest of the testings on the contrast between text colors against their backgrounds returned positive results.
+The rest of the testings on the contrast between text colors against their backgrounds with the [Adoby Color Contrast Checker](https://color.adobe.com/create/color-contrast-analyzer) returned positive results.
 
 Beige color on dark-blue background:
 
@@ -168,6 +173,10 @@ Light-blue color on dark-blue background:
 Dark-blue color on beige background:
 
 ![Dark-blue on beige](media/contrast-checker-dark-blue-on-beige.jpeg)
+
+The site colors were also checked for accessibility to ensure they are color-blind safe using the [Adoby Color accessinility tool](https://color.adobe.com/create/color-accessibility), which returned the following result :'No conflicts found. Swatches are color blind safe':
+
+![Color blind safe test](media/color-blind-test.jpeg)
 
 
 ### Solved Bugs

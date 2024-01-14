@@ -12,7 +12,28 @@ The site's primary goal is to help traders to keep a track of their trading prog
 
 ### Project Structure
 
-### Design, fonts, colors
+### Design
+
+#### Color pallette
+
+The colors for Trade tracker were carefully selected using [Colormind tool](http://colormind.io/) to create a balanced, sophisticated palette that is both professional and user-friendly. The blend of warm and cool tones, along with the varying intensities of color, makes the site look modern, trustworthy, and accessible, creating the feeling of confidence and comfort.
+
+![Improved Color Palette](media/new-color-pallete.jpeg)
+
+- #2B3C4D: This color was chosen for the site background and buttons text. It is a deep, dark blue, almost navy color, very strong and authoritative, associated with expertise and stability. It helps to establish the site as a serious and professional tool for trading.
+
+- #CEB4AF: This color is the second main color and is used for the main heading, buttons' background, and text in the summary table. This color is a soft, warm beige. It adds a touch of elegance and warmth, balancing the cooler tones of the palette. It helps to make the site feel more welcoming, especially to users new to trading.
+
+- #A3B0BF: This color is used for H2, H3, and paragraph colors. It adds a sense of calm and approachability to the website.
+
+- #535361 & #8A8FA1: The remaining two colors are used for smaller elements on the site, for instance, labels' text color on the forms, table design, buttons' background on hover, etc., and help to add the final touch to the entire palette and ensure the site looks professional, reliable, accessible, and welcoming.
+
+#### Fonts
+
+The fonts for the site were selected using font pairing service [Font Joy](https://fontjoy.com/).
+
+
+
 
 ### Existing Features
 

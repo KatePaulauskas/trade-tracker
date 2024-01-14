@@ -30,9 +30,16 @@ The colors for Trade tracker were carefully selected using [Colormind tool](http
 
 #### Fonts
 
-The fonts for the site were selected using font pairing service [Font Joy](https://fontjoy.com/).
+The fonts for the site were selected using font pairing service [Font Joy](https://fontjoy.com/). The chosen forns are aimed at making Trading Tracker site appear both professional and user-friendly. The combination of Averia Gruesa Libre's approachability, Expletus Sans's creativity, and Josefin Sans's readability helps to create a balanced and engaging visual appearance of the site. 
+
+![Font Paring](media/fonts.png)
 
 
+ - Averia Gruesa Libre is a bold and slightly playful font. Its uniqueness lies in its hand-drawn style, which adds a personal and friendly  touch to the Trade Tracker site. Using it for H1 heading ensures that it stands out and grabs attention, making the site feel more welcoming.
+
+- Expletus Sans is a decorative and playful font. It has a unique character, with a lively and approachable appearance. This font was chosen for H2 and H3 headings to maintain readability while adding a touch of personality. 
+
+- Josefin Sans is a clean, simple and elegant font. It is straightforward and classy, making it a great choice for paragraph text where readability is key. Its simplicity complements the more decorative nature of the other two fonts, ensuring that the  site remains sharp and professional.
 
 
 ### Existing Features
@@ -142,11 +149,25 @@ The color palette for the site was selected using [Colormind tool](http://colorm
 
 However, after running test to check the site text colors against their backgrounds for contrast using the Adobe Color [Contrast Checker](https://color.adobe.com/), an issue was identified with one of the colors: 
 
-![Contrast Checker: gray on white](media/48B273CF-E2AC-4F03-A399-7D21011D4817_1_201_a.jpeg)
+![Contrast Checker: gray on white](media/contrast-checker-gray-on-white.jpeg)
 
 Therefore a darker shade was chosen and the color #868289 was replaced with 535361:
 
 ![Improved Color Palette](media/new-color-pallete.jpeg)
+
+The rest of the testings on the contrast between text colors against their backgrounds returned positive results.
+
+Beige color on dark-blue background:
+
+![Beige on dark-blue](media/contrast-checker-beige-on-dark-blue.jpeg)
+
+Light-blue color on dark-blue background:
+
+![Light-blue on dark-blue](media/contrast-checker-light-blue-on-dark-blue.jpeg.jpeg)
+
+Dark-blue color on beige background:
+
+![Dark-blue on beige](media/contrast-checker-dark-blue-on-beige.jpeg)
 
 
 ### Solved Bugs

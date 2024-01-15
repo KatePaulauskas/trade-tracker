@@ -24,7 +24,7 @@ h1 {
     color: #ceb4af;
     text-align: center;
     font-size: 250%;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 /* H2 & H3 styling */
@@ -181,14 +181,19 @@ td {
     font-family: "Josefin Sans", sans-serif;
     color: #ceb4af;
     font-size: 115%;
-    font-weight: 400;
     padding: 5px;
     border: 1px solid #a3b0bf;
 }
 
-#trades-summary {
+#list-of-trades th {
+    font-weight: 400;
+}
+
+
+#list-of-trades > tbody {
+    font-family: "Josefin Sans", sans-serif;
     font-size: 80%;
-    font-weight: 100;
+    font-weight: 150;
 }
 
 /* Footer */

@@ -187,6 +187,7 @@ document.getElementById("add-trade-button").addEventListener("click", function()
 		storeTrade(tradeData);
 	}
 	displayTrades();
+	clearAddTradeForm();
 });
 
 // Store trade details in local storage. Ensure trades do not get overwritten, but are stored as arrays. Source: https://blog.logrocket.com/localstorage-javascript-complete-guide/
@@ -242,3 +243,9 @@ function displayTrades() {
 	// Set the inner HTML of the 'List of trades' table to the html string
 	document.getElementById("trades-summary").innerHTML = html;
 };
+
+// Clear the 'Add new trade' form after a new trade is stored to the local storage. Source: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
+function clearAddTradeForm() {
+	document.getElementById("add-trade").reset();
+};
+

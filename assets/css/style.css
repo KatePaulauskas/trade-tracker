@@ -1,5 +1,5 @@
 /* Import Google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Expletus+Sans&family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
 /* Basic styles */
 body {
@@ -51,7 +51,6 @@ input::placeholder {
     font-size: 14px;
     font-style: italic;
     justify-content: center;
-
 }
 
 /* Style enty area */
@@ -123,7 +122,8 @@ input::placeholder {
 
 /* Style Add New Trade form */
 
-#investment-form, #add-trade {
+#investment-form,
+#add-trade {
     margin-top: 10px;
     font-size: 100%;
     display: flex;
@@ -159,12 +159,37 @@ td {
     font-family: "Josefin Sans", sans-serif;
     color: #ceb4af;
     font-size: 115%;
+    font-weight: 400;
     padding: 5px;
     border: 1px solid #a3b0bf;
 }
 
+#trades-summary {
+    font-size: 80%;
+    font-weight: 100;
+}
+
 /* Media query: tablets and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
+    /* Increase fonts size */
+    h1 {
+        font-size: 350%;
+    }
+
+    h2,
+    h3 {
+        font-size: 170%;
+    }
+
+    p {
+        font-size: 200%;
+    }
+
+    table,
+    th,
+    td {
+        font-size: 130%;
+    }
 
     /* Change alignment of the enty area */
     .entry-area {
@@ -172,7 +197,25 @@ td {
         align-items: start;
     }
 
-    /* Display iInvestment and New Trade headings */
+    /* Increase input fields on both forms */
+    #investment-box {
+        width: 250px;
+        height: 35px;
+    }
+
+    #add-trade input {
+        width: 250px;
+        height: 35px;
+    }
+
+    #add-investment,
+    #add-trade-button {
+        width: 100px;
+        height: 40px;
+        padding-bottom: 0px;
+    }
+
+    /* Display Investment and New Trade headings */
     .investment,
     .new-trade {
         display: block;
@@ -199,5 +242,14 @@ td {
         background-color: #2b3c4b;
         border-color: #8a8fa1;
         color: #ceb4af;
+    }
+}
+
+/* Media query: larger devices (laptops & desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    table {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }

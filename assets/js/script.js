@@ -86,7 +86,7 @@ function clearInvestmentBox() {
 	document.getElementById("investment-box").value = '';
 };
 
-// Add an event listener to the 'Submit' button in the 'Add Trades' section
+// Add an event listener to the 'Submit' button in the 'Add Trades' section to perform calculations for 'Summary' table
 document.getElementById("add-trade-button").addEventListener("click", function() {
 	calculateTotalProfitLossAmount();
 });
@@ -157,8 +157,8 @@ function calculateProfitLossPercent(currentInvestment, currentProfitLossAmount) 
 };
 
 // Function to update 'Current Balance' and '% Profit/Loss'
-
 function updateCurrentBalanceAndProfitLossPercent() {
+
 	// Get from local storage the amout currently invested
 	let currentInvestment = parseFloat(localStorage.getItem("investmentResult")) || 0;
 
@@ -170,8 +170,10 @@ function updateCurrentBalanceAndProfitLossPercent() {
 	calculateProfitLossPercent(currentInvestment, currentProfitLossAmount);
 };
 
+// Add an event listener to the 'Submit' button in the 'Add Trades' section to store form submission data in local storage
+document.getElementById("add-trade-button").addEventListener("click", function() {
+	
 // Create an object to store trade details in local storage
-
 let tradeData = {
 	openDate: document.getElementById("open-date").value,
 	closeDate: document.getElementById("close-date").value,
@@ -179,3 +181,11 @@ let tradeData = {
 	result: document.getElementById("result").value,
 	comments: document.getElementById("comments").value,
 };
+storeTrade(tradeData);
+});
+
+// Store trade details in local storage
+function storeTrade(tradeData) {
+	localStorage.setItem("trades", JSON.stringify(tradeData));
+};
+

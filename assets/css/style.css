@@ -1,10 +1,21 @@
 /* Import Google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
+/* Asterisk wildcard selector to create a consistent starting point across different browsers and remove white edges on the sides and the top of the page */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
 /* Basic styles */
 body {
     background: #2b3c4b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
+
 
 /* H1 styling */
 
@@ -34,6 +45,17 @@ p {
     color: #8a8fa1;
     font-size: 140%;
 }
+
+/* Main */
+ /* Make the main element to take up any excess space and push footer to the bottom */
+ main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 70px;
+ }
+
 
 /* Apply style to form elements */
 
@@ -168,6 +190,30 @@ td {
     font-size: 80%;
     font-weight: 100;
 }
+
+/* Footer */
+
+footer {
+    border-color: #2b3c4b;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+}
+
+.footer {
+    background-color: #a3b0bf;
+    border-top: 0.5px solid #a3b0bf;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+iconify-icon {
+    padding: 5px;
+}
+
 
 /* Media query: tablets and larger screens (768px and up) */
 @media screen and (min-width: 768px) {

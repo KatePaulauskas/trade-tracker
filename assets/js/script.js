@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	displayTrades();
 });
 
-// Add event listeners to 'Add' and 'Withdraw' buttons
+// Add event listeners to 'Add' button
 document.getElementById("add-investment").addEventListener("click", function() {
 	addInvestment();
 });

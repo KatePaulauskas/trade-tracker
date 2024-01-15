@@ -184,8 +184,29 @@ let tradeData = {
 storeTrade(tradeData);
 });
 
-// Store trade details in local storage
+// Store trade details in local storage. Ensure trades do not get overwritten, but are stored as arrays. Source: https://blog.logrocket.com/localstorage-javascript-complete-guide/
 function storeTrade(tradeData) {
-	localStorage.setItem("trades", JSON.stringify(tradeData));
+
+	// Get existing trades from local storage.
+	let trades = localStorage.getItem("trades");
+
+	// Check if no trades exist.
+	if (trades === null) {
+
+		// Create an empty array if no trades exist, to store trades.
+		trades = [];
+	} else {
+
+		// If trades exist, parse the trades value as an array.
+		trades = JSON.parse(trades);
+	}
+
+	// Add each new trade to the array of trades.
+	trades.push(tradeData);
+
+	// Save the updated array back to local storage.
+	localStorage.setItem("trades", JSON.stringify(trades));
 };
+
+
 

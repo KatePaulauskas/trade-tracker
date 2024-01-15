@@ -86,7 +86,7 @@ function clearInvestmentBox() {
 	document.getElementById("investment-box").value = '';
 };
 
-// Add an event listener to the 'Submit' button in the 'Add Trades' section to perform calculations for 'Summary' table
+// Add an event listener to the 'Add' button in the 'Add Trades' form to perform calculations for 'Summary' table
 document.getElementById("add-trade-button").addEventListener("click", function() {
 	calculateTotalProfitLossAmount();
 });
@@ -181,7 +181,10 @@ let tradeData = {
 	result: document.getElementById("result").value,
 	comments: document.getElementById("comments").value,
 };
-storeTrade(tradeData);
+    // Store trades data only if the imvestment amount was entered 
+    if(isInvestmentEntered()) {
+    storeTrade(tradeData);
+    }
 });
 
 // Store trade details in local storage. Ensure trades do not get overwritten, but are stored as arrays. Source: https://blog.logrocket.com/localstorage-javascript-complete-guide/
@@ -206,6 +209,11 @@ function storeTrade(tradeData) {
 
 	// Save the updated array back to local storage.
 	localStorage.setItem("trades", JSON.stringify(trades));
+};
+
+// Check if the imvestment amount was entered 
+function isInvestmentEntered () {
+	return document.getElementById("total-investment").innerText !== '0';
 };
 
 

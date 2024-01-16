@@ -60,7 +60,7 @@ Below the heading, the entry area is positioned. It has a slightly different app
 
 - **Mobile**
 
-On mobile devices, when users land on the site, they are greeted with the heading, followed by two vertically aligned buttons: 'Add Investment' and 'Add New Trade.' These buttons feature a beige background with text in dark-blue, creating a consistent and contrasting look.
+On mobile devices, when users land on the site, they are greeted with the heading, followed by two vertically aligned buttons: 'Add Investment' and 'Add New Trade' These buttons feature a beige background with text in dark-blue, creating a consistent and contrasting look.
 
 ![Entry Area on mobile](media/entry-area-mobile-closed.jpeg)
 
@@ -223,9 +223,9 @@ The site colors were also checked for accessibility to ensure they are color-bli
 
 ### Solved Bugs
 
-To ensure forms validation the Constraint validation was achieved using the Constraint Validation API described in the folloeing source:[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
+1. When working with the 'Add Investment' and 'Add New Trade' entry forms, the buttons' type was changed from 'submit' to 'button' as forms submission wasn't necessary, and the 'button' type seemed more suitable for locally storing data entered in the forms. However, it was later discovered that this change disabled the forms' validation functionality. Further research into the topic revealed that constraint validation could still be achieved using the Constraint Validation API, as described in the following source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process), which provided guidance on resolving the issue.
 
-- The instructions on how to work with the local storage were taken from the following source: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/).
+2. The current project required the use of local storage and implementation of JSON functions, which were out of my scope. However, the inspiration drawn from the project idea led to further research on this topic. In working with local storage and JSON functions, two key sources were instrumental in bridging knowledge gaps on this previously out-of-scope topics: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/) and [LogRocket Frontend Analytics](https://blog.logrocket.com/localstorage-javascript-complete-guide/).
 
 
 

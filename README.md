@@ -48,7 +48,7 @@ The fonts for the site were selected using font pairing service [Font Joy](https
 
 ### Existing Features
 
-#### Above-the-fold
+#### Entry Area
 
 The above-the-fold area features the 'Trade Tracker' heading at the top beside a stock icon, which functions as a logo. This heading is centrally placed, making it prominent and captivating. It's displayed in beige color set against a dark blue backdrop:
 
@@ -73,21 +73,47 @@ On larger screens, collapsible sections are unnecessary due to the ample screen 
 
 ![Entry Area on desktop](media/entry-area-desktop.jpeg)
 
+##### Add Investment
+
+The 'Add Investment' form enables the user to top up their investment at any time and is a requirement before starting to add trades. The user can only add a positive number for the investment.
+
+##### Add New Trade
+
+The 'Add New Trade' form has 5 fields:
+
+- Open date
+- Close date
+- Stock Name
+- Profit/Loss amount: This can be a positive or negative amount, with a "-" sign if the user incurred a loss during the trade.
+- Comments: This field allows the user to make notes about the strategy used, emotions experienced during the trade, etc., which could help in analysing their trading strategy in the future. 
+
 #### Summary table
 
-Promptly unde the entry area a 'Summary' table is displaied. It gives a quick overview of his trading journal, providing overview on the progress made and where the user stands, displaying the 'Total investment' amount , the 'Currnet balance', which is a summary of investments and trades made. Also, 'Totla profit/loss' amount provides the summary on the amount made through all trades. In ther last line '%profit/loss' is presented. This a a great way to view the result at a glance.
+Directly beneath the entry area, a 'Summary' table is displayed. It offers a quick overview of the user's trading journal, highlighting progress and current standing. The table shows:
+ - The 'Total Investment' amount made.
+ - The 'Current Balance' summarizes the investments and trades made.
+ - 'Total profit/loss' amount rovides a summary of earnings or losses from all trades
+ - The last line presents the '% Profit/Loss,' offering a convenient way to view results at a glance.
 
 ![Summary table](media/summary-table.jpeg)
 
 #### List of trades table
 
+The list of trades is positioned below the 'Summary' table and displays data on all the trades entered. This allows the user to review past trades and analyse them using the comments, stock names, dates and results of each trade.
+
 ![List of trades table](media/list-of-trades-table.jpeg)
 
 #### Settings section
 
+Towards the bottom of the page, there are two buttons. One of them provides instructions on how to use the Trade Tracker, which can be helpful for new users or those who are unsure about how to use the application effectively. 
+
+The second button offers a reset option. By clicking on this, all data is erased, allowing the user to start from scratch.
+
 ![Settings](media/settings.jpeg)
 
 #### Footer
+
+At the bottom of the page, a footer is positioned, containing a link to the GitHub URL of the current project.
 
 ![Footer](media/footer.jpeg)
 

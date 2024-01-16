@@ -6,7 +6,7 @@ The site's target audience would be anyone involved in stock trading. It is suit
 
 The site's primary goal is to help traders to keep a track of their trading progress and demonstrate a summary based on their current progress.
 
-![Responsive Mockup]()
+![Responsive Mockup](media/responsive-mockup.jpeg)
 
 ### Design
 
@@ -48,7 +48,49 @@ The fonts for the site were selected using font pairing service [Font Joy](https
 
 ### Existing Features
 
-#### 
+#### Above-the-fold
+
+The above-the-fold area features the 'Trade Tracker' heading at the top beside a stock icon, which functions as a logo. This heading is centrally placed, making it prominent and captivating. It's displayed in beige color set against a dark blue backdrop:
+
+![Heading](media/)
+
+##### Entry area
+
+Below the heading, the entry area is positioned. It has a slightly different appearance on mobile devices compared to larger screens.
+
+- **Mobile**
+
+On mobile devices, when users land on the site, they are greeted with the heading, followed by two vertically aligned buttons: 'Add Investment' and 'Add New Trade.' These buttons feature a beige background with text in dark-blue, creating a consistent and contrasting look.
+
+![Entry Area on mobile](media/entry-area-mobile-closed.jpeg)
+
+Clicking on either button expands additional collapsible sections for adding investments or logging trades. Each section has an 'Add' button. These collapsible areas retract upon pressing on each of the buttons once more.
+
+![Entry Area on mobile with collapsible areas opened](media/entry-area-mobile-open.jpeg)
+
+
+- **Larger Screens**
+
+On larger screens, collapsible sections are unnecessary due to the ample screen space, therefore the entry area is fully displayed. The buttons are replaced by headings, and entry fields placed underneath each heading, creating two forms: 'Add Investment' and 'Add New Trade'. For efficient space utilisation, the 'Add Investment' and 'Add New Trade' forms are positioned side by side. The 'Add Investment' form is on the left, intuitively guiding users to start there as they typically read from left to right.
+
+![Entry Area on desktop](media/entry-area-desktop.jpeg)
+
+#### Summary table
+
+![Summary table](media/summary-table.jpeg)
+
+#### List of trades table
+
+![List of trades table](media/.jpeg)
+
+#### Settings section
+
+![List of trades table](media/.jpeg)
+
+#### Footer
+
+![List of trades table](media/.jpeg)
+
 
 ### Features Left to Implement
 

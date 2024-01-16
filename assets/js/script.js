@@ -249,3 +249,19 @@ function clearAddTradeForm() {
 	document.getElementById("add-trade").reset();
 };
 
+
+// Clear local storage and reset trade tracker
+document.getElementById("reset").addEventListener("click", function clearLocalStorage() {
+	// Clear locla storage
+    localStorage.clear();
+	  // Select all 'td' elements in the 'summary-table' and set their content to zero
+	  let tds = document.querySelectorAll("#summary-table td");
+	  for (let i = 0; i < tds.length; i++) {
+		  tds[i].textContent = '0'; 
+	  }
+	  	// Clear 'List of trades' table
+	document.getElementById("trades-summary").innerHTML = '';
+  });
+
+
+

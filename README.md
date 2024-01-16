@@ -48,11 +48,11 @@ The fonts for the site were selected using font pairing service [Font Joy](https
 
 ### Existing Features
 
-#### Entry Area
+#### Above-the-fold and Entry Area
 
 The above-the-fold area features the 'Trade Tracker' heading at the top beside a stock icon, which functions as a logo. This heading is centrally placed, making it prominent and captivating. It's displayed in beige color set against a dark blue backdrop:
 
-![Heading](media/heading-with-icon.jpeg)
+![Heading](media/trade-tracker-heading.jpeg)
 
 Below the heading, the entry area is positioned. It has a slightly different appearance on mobile devices compared to larger screens.
 
@@ -75,7 +75,21 @@ On larger screens, collapsible sections are unnecessary due to the ample screen 
 
 ##### Add Investment
 
-The 'Add Investment' form enables the user to top up their investment at any time and is a requirement before starting to add trades. The user can only add a positive number for the investment.
+The 'Add Investment' form enables the user to top up their investment at any time:
+
+![Add Investment](media/add-investment.jpeg)
+
+It prevents the user from submitting an empty form: 
+
+![](media/fill-out-investment-field.jpeg)
+
+The user can only add a positive number for the investment:
+
+![Enter positive amount to save investment](media/enter-positive-amount.jpeg)
+
+ And is a requirement before starting to add trades:
+
+![Fill out investment entry field](media/enter%20investment%20before%20adding%20trades.jpeg)
 
 ##### Add New Trade
 
@@ -86,6 +100,16 @@ The 'Add New Trade' form has 5 fields:
 - Stock Name
 - Profit/Loss amount: This can be a positive or negative amount, with a "-" sign if the user incurred a loss during the trade.
 - Comments: This field allows the user to make notes about the strategy used, emotions experienced during the trade, etc., which could help in analysing their trading strategy in the future. 
+
+![Add new trade](media/add-new-trade.jpeg)
+
+"Each of the fields is required in the form and the form cannot be submitted without filling them in:
+
+![Add new trade form validation]()
+
+In addition, the user is not able to enter a loss that exceeds current balance, as typically broker would intervene and prevent the user from going into negative balance:
+
+![](media/loss-cannot-exceed-current-balance.jpeg)
 
 #### Summary table
 

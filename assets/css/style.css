@@ -364,10 +364,6 @@ iconify-icon {
         left: 25%;
         right: 25%;
         font-size: 105%;
-        /* Center content when popup is visible */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     #close-popup {

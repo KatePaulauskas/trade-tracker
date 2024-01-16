@@ -196,6 +196,15 @@ td {
     font-weight: 150;
 }
 
+    /* Style 'Summary' table */
+
+#summary-table th {
+    font-weight: 400;
+    justify-content: left;
+    display: flex;
+}
+
+/* Style Settings Section */
 #settings {
     display: flex;
     flex-direction: row;

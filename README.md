@@ -52,9 +52,7 @@ The fonts for the site were selected using font pairing service [Font Joy](https
 
 The above-the-fold area features the 'Trade Tracker' heading at the top beside a stock icon, which functions as a logo. This heading is centrally placed, making it prominent and captivating. It's displayed in beige color set against a dark blue backdrop:
 
-![Heading](media/)
-
-##### Entry area
+![Heading](media/heading-with-icon.jpeg)
 
 Below the heading, the entry area is positioned. It has a slightly different appearance on mobile devices compared to larger screens.
 
@@ -77,19 +75,21 @@ On larger screens, collapsible sections are unnecessary due to the ample screen 
 
 #### Summary table
 
+Promptly unde the entry area a 'Summary' table is displaied. It gives a quick overview of his trading journal, providing overview on the progress made and where the user stands, displaying the 'Total investment' amount , the 'Currnet balance', which is a summary of investments and trades made. Also, 'Totla profit/loss' amount provides the summary on the amount made through all trades. In ther last line '%profit/loss' is presented. This a a great way to view the result at a glance.
+
 ![Summary table](media/summary-table.jpeg)
 
 #### List of trades table
 
-![List of trades table](media/.jpeg)
+![List of trades table](media/list-of-trades-table.jpeg)
 
 #### Settings section
 
-![List of trades table](media/.jpeg)
+![Settings](media/settings.jpeg)
 
 #### Footer
 
-![List of trades table](media/.jpeg)
+![Footer](media/footer.jpeg)
 
 
 ### Features Left to Implement

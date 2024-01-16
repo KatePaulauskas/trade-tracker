@@ -194,7 +194,7 @@ td {
 #list-of-trades > tbody {
     font-family: "Josefin Sans", sans-serif;
     font-size: 80%;
-    font-weight: 150;
+    font-weight: 250;
 }
 
 /* Style 'Summary' table */
@@ -220,7 +220,7 @@ td {
     margin-right: 20px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 120%;
-    width: 110px;
+    width: 120px;
     height: 30px;
     background-color: #a3b0bf;
     color: #2b3c4b;
@@ -242,7 +242,7 @@ td {
     padding: 20px 5px;
     border: 1px solid #535361;
     font-size: 100%;
-    font-weight: 250;
+    font-weight: 350;
 }
 
 #popup-content {
@@ -367,7 +367,6 @@ iconify-icon {
         right: 15%;
         top: 20%;
         font-size: 110%;
-        font-weight: 300;
     }
 
     #close-popup {

@@ -63,7 +63,6 @@ function addInvestment() {
 	updateCurrentBalanceAndProfitLossPercent();
 };
 
-
 // Function to update the local storage invested amount. Source: https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/
 function storeInvestment(amount) {
 	localStorage.setItem("investmentResult", amount);
@@ -74,7 +73,6 @@ function storeInvestment(amount) {
 	// Call the function to clear the investment box once the investment amount is stored and displayed 
 	clearInvestmentBox();
 };
-
 
 // Display the invested amount
 function updateDisplayedInvestment() {
@@ -127,8 +125,6 @@ function calculateTotalProfitLossAmount() {
 		document.getElementById("add-trade").reportValidity();
 	}
 };
-
-
 
 // Display the 'Total Profit/loss'
 function updateProfitLoss() {
@@ -249,7 +245,6 @@ function clearAddTradeForm() {
 	document.getElementById("add-trade").reset();
 };
 
-
 // Clear local storage and reset trade tracker
 document.getElementById("reset").addEventListener("click", function clearLocalStorage() {
 	// Clear locla storage
@@ -263,12 +258,12 @@ document.getElementById("reset").addEventListener("click", function clearLocalSt
 	document.getElementById("trades-summary").innerHTML = '';
   });
 
-  // Display popup with instructions
+  // Display popup with instructions, function is used in HTML on button click
   function displayPopup() {
 	document.getElementById("instructions-popup").style.display = "block";
   };
 
-// Close popup with instructions
+// Close popup with instructions, function is used in HTML on button click
 	function closePopup() {
 		document.getElementById("instructions-popup").style.display = "none";
 	  };

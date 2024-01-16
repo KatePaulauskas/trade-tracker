@@ -27,13 +27,13 @@
                     <!-- Heading to be used on larder screens instead of button -->
                     <h2 class="investment">Add investment</h2>
                     <!-- Button for mobile only -->
-                    <button class="new-entry">Add investment</button>
+                    <button class="new-entry" title="Click to enter investment">Add investment</button>
                     <div class="collapsable-entry-area">
                         <form id="investment-form">
                             <input type="number" name="investment-box" id="investment-box" placeholder="Enter the amount" required>
                             <div class="investment-action-buttons">
                                 <!-- Set button to 'button' type to prevent submissions. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button -->
-                                <button id="add-investment" type="button">Add</button>
+                                <button id="add-investment" type="button" title="Click to add to save the investment">Add</button>
                             </div>
                         </form>
                     </div>
@@ -43,7 +43,7 @@
                     <!-- Heading to be used on larder screens instead of button -->
                     <h2 class="new-trade">Add new trade</h2>
                     <!-- Button for mobile only -->
-                    <button class="new-entry">Add new trade</button>
+                    <button class="new-entry" title="Click to enter a new trade">Add new trade</button>
                     <div class="collapsable-entry-area">
                         <form id="add-trade">
                             <label for="open-date">Open date</label>
@@ -61,7 +61,7 @@
                             <label for="comments">Comments</label>
                             <input type="text" name="comments" id="comments" class="date-input" placeholder="Add comment" required>
                             <br>
-                            <button type="button" id="add-trade-button">Add</button>
+                            <button type="button" id="add-trade-button" title="Click add to save the new trade">Add</button>
                         </form>
                     </div>
                 </div>

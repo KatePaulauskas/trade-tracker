@@ -215,7 +215,7 @@ td {
 
 /* Style buttons in Settings section */
 .settings {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
     font-family: "Josefin Sans", sans-serif;
@@ -228,8 +228,12 @@ td {
     border-color: #2b3c4b;
 }
 
-/* Style instructions popup */
+#instructions, #reset {
+    margin-top: 40px;
+    padding: 5px;
+}
 
+/* Style instructions popup */
 #instructions-popup {
     display: none;
     position: fixed;
@@ -258,10 +262,14 @@ td {
 }
 
 #instructions-popup ol {
-    padding: 20px;
+    padding: 10px 20px;
     font-family: "Josefin Sans", sans-serif;
     color: #2b3c4b;
     align-items: flex-start;
+}
+
+li {
+    padding-bottom: 10px;
 }
 
 /* Footer */
@@ -367,6 +375,7 @@ iconify-icon {
         right: 15%;
         top: 20%;
         font-size: 110%;
+        padding: 20px;
     }
 
     #close-popup {

@@ -96,14 +96,13 @@ On larger screens, collapsible sections are unnecessary due to the ample screen 
 
 The following features could be implemented to further advance the Trade Tracker functionality and improve user experience:
 
-1. Initially in the wireframe, a chart showing progress over time was presented. However, due to time constraints and the complexity of the setup, it was decided to move it under future features and replace it with a table of entered trades.
+1. Initially to was planned to create a chart showing progress over time and displaying i under the 'Summary' table. However, due to time constraints and the complexity of the setup, it was decided to move it under future features and replace it with a table of entered trades.
 2. Display a log of investments along with their respective dates.
 3. Add an option to withdraw from the current balance.
-4. Introduce a reset button to start the trading journal from scratch.
-5. Display negative numbers in a different color (red) for clarity.
-6. Show alerts when the % profit/loss is negative. Offer suggestions to change or improve the trading strategy, and recommend articles and educational videos on strategy improvement.
-7. Offer data storage on the backend. Add a login bar for the members' area, allowing the Trade Tracker to be accessed through any browser. Users can log into their accounts and access their records.
-8. Provide a dropdown menu for users to choose their preferred currency for display, ensuring that values are shown in a monetary format rather than as plain numbers.
+4. Display negative numbers in a different color (red) for clarity.
+5. Show alerts when the % profit/loss is negative. Offer suggestions to change or improve the trading strategy, and recommend articles and educational videos on strategy improvement.
+6. Offer data storage on the backend. Add a login bar for the members' area, allowing the Trade Tracker to be accessed through any browser. Users can log into their accounts and access their records.
+7. Provide a dropdown menu for users to choose their preferred currency for display, ensuring that values are shown in a monetary format rather than as plain numbers.
 
 ## Testing
 
@@ -150,7 +149,7 @@ In an attempt to adhere to web standards and accessibility, the site was submitt
 To align with web standards and ensure accessability compliance CSS code of the site was submitted to [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fkatepaulauskas.github.io%2Faerial-photography%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en). One error was identified, as described below.
 
 - __Error 1:__ [Parse Error](media/css-validation-error.jpeg)
-  - Correction: The missing cirly bracket was added at the end of the media query for tablets and larger screens.
+  - Correction: The missing curly bracket was added at the end of the media query for tablets and larger screens.
 
 #### JavaScript
 
@@ -223,6 +222,9 @@ The site colors were also checked for accessibility to ensure they are color-bli
 
 
 ### Solved Bugs
+
+### Unsolved Bugs
+At present, to access the collapsible sections for making entries on mobile devices upon initial load, the buttons need to be clicked twice. Subsequent buttons respond with a single touch. However, after reloading the page, this behavior repeats itself. This occurs on both iOS and Android devices. In an attempt to resolve this and achieve buttons' response with a single click on initial load, various touch events were tested when adding event listeners to the buttons: 'click,' 'touchstart,' and 'touchend,' following instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events). Unfortunately, this did not alter the behavior, and the bug remains unresolved.
 
 ## Deployment
 

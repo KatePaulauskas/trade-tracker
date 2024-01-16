@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
 
 /* Basic styles */
 body {
@@ -15,7 +16,6 @@ body {
     flex-direction: column;
     margin: 0;
 }
-
 
 /* H1 styling */
 
@@ -30,7 +30,8 @@ h1 {
 /* H2 & H3 styling */
 
 h2,
-h3 {
+h3,
+h4 {
     font-family: "Expletus Sans", sans-serif;
     color: #a3b0bf;
     text-align: center;
@@ -47,15 +48,14 @@ p {
 }
 
 /* Main */
- /* Make the main element to take up any excess space and push footer to the bottom */
- main {
+/* Make the main element to take up any excess space and push footer to the bottom */
+main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 50px;
- }
-
+}
 
 /* Apply style to form elements */
 
@@ -196,7 +196,7 @@ td {
     font-weight: 150;
 }
 
-    /* Style 'Summary' table */
+/* Style 'Summary' table */
 
 #summary-table th {
     font-weight: 400;
@@ -212,7 +212,8 @@ td {
     justify-content: center;
 }
 
-#settings button {
+/* Style buttons in Settings section */
+.settings {
     margin-top: 40px;
     margin-left: 20px;
     margin-right: 20px;
@@ -224,7 +225,41 @@ td {
     color: #2b3c4b;
     border-radius: 10%;
     border-color: #2b3c4b;
+}
 
+/* Style instructions popup */
+
+#instructions-popup {
+    display: none;
+    position: fixed;
+    width: auto;
+    top: 20%;
+    left: 5%;
+    right: 5%;
+    justify-self: center;
+    background-color: #a3b0bf;
+    padding: 20px 5px;
+    border: 1px solid #535361;
+    font-size: 70%;
+}
+
+#popup-content {
+    /* Center popup content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#instructions-popup h3,
+h4 {
+    color: #2b3c4b;
+}
+
+#instructions-popup ol {
+    padding: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #535361;
+    align-items: flex-start;
 }
 
 /* Footer */
@@ -247,7 +282,6 @@ footer {
 iconify-icon {
     padding: 5px;
 }
-
 
 /* Media query: tablets and larger screens (768px and up) */
 @media screen and (min-width: 768px) {
@@ -323,6 +357,21 @@ iconify-icon {
         background-color: #2b3c4b;
         border-color: #8a8fa1;
         color: #ceb4af;
+    }
+
+    /* Style instructions popup */
+    #instructions-popup {
+        left: 25%;
+        right: 25%;
+        font-size: 105%;
+        /* Center content when popup is visible */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #close-popup {
+        height: 35px;
     }
 }
 

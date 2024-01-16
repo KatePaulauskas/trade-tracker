@@ -254,7 +254,7 @@ function clearAddTradeForm() {
 document.getElementById("reset").addEventListener("click", function clearLocalStorage() {
 	// Clear locla storage
     localStorage.clear();
-	  // Select all 'td' elements in the 'summary-table' and set their content to zero
+	  // Select all 'td' elements in the 'summary-table' and set their content to zero. Source: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 	  let tds = document.querySelectorAll("#summary-table td");
 	  for (let i = 0; i < tds.length; i++) {
 		  tds[i].textContent = '0'; 
@@ -262,6 +262,16 @@ document.getElementById("reset").addEventListener("click", function clearLocalSt
 	  	// Clear 'List of trades' table
 	document.getElementById("trades-summary").innerHTML = '';
   });
+
+  // Display popup with instructions
+  function displayPopup() {
+	document.getElementById("instructions-popup").style.display = "block";
+  };
+
+// Close popup with instructions
+	function closePopup() {
+		document.getElementById("instructions-popup").style.display = "none";
+	  };
 
 
 

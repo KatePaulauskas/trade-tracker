@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		button.addEventListener("touchstart", function() {
 
 			// Target the next sibling elements (collapsible entry areas) in the DOM after buttons with the "new-entry" class
-			const collapsableEntryArea = this.nextElementSibling;
+			const collapsibleEntryArea = this.nextElementSibling;
 
 			// Check if the collapsible entry areas are hidden (display is set to 'none')
-			const collapsableEntryAreaIsHidden = collapsableEntryArea.style.display === 'none';
+			const collapsibleEntryAreaIsHidden = collapsibleEntryArea.style.display === 'none';
 
 			// Display collapsible entry areas on buttons clicks if hidden; hide if shown
-			collapsableEntryArea.style.display = collapsableEntryAreaIsHidden ? "block" : "none";
+			collapsibleEntryArea.style.display = collapsibleEntryAreaIsHidden ? "block" : "none";
 		});
 	}
 	updateDisplayedInvestment();
@@ -119,6 +119,9 @@ function calculateTotalProfitLossAmount() {
 
 			// Call the function to update the displayed profit/loss
 			updateProfitLoss();
+
+			// Clear the form once tade data stored 
+			clearAddTradeForm();
 		}
 	} else {
 		// If form is not valid, trigger error messages. 
@@ -178,12 +181,11 @@ document.getElementById("add-trade-button").addEventListener("click", function()
 		result: document.getElementById("result").value,
 		comments: document.getElementById("comments").value,
 	};
-	// Store trades data only if the imvestment amount was entered 
+	// Store trades data only if the investment amount was entered 
 	if (isInvestmentEntered()) {
 		storeTrade(tradeData);
 	}
 	displayTrades();
-	clearAddTradeForm();
 });
 
 // Store trade details in local storage. Ensure trades do not get overwritten, but are stored as arrays. Source: https://blog.logrocket.com/localstorage-javascript-complete-guide/
@@ -247,8 +249,9 @@ function clearAddTradeForm() {
 
 // Clear local storage and reset trade tracker
 document.getElementById("reset").addEventListener("click", function clearLocalStorage() {
-	// Clear locla storage
+	// Clear loclal storage
     localStorage.clear();
+
 	  // Select all 'td' elements in the 'summary-table' and set their content to zero. Source: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 	  let tds = document.querySelectorAll("#summary-table td");
 	  for (let i = 0; i < tds.length; i++) {

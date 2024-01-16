@@ -48,6 +48,7 @@ function addInvestment() {
 		// Get stored investment from the local storage, or display 'zero' if no data stored
 		let currentInvestment = parseFloat(localStorage.getItem("investmentResult")) || 0;
 		if (amount > 0) {
+
 			// Add the entered amount to already invested amount
 			currentInvestment += amount;
 			storeInvestment(currentInvestment);
@@ -57,6 +58,7 @@ function addInvestment() {
 			alert("Enter a positive amount!");
 		}
 	} else {
+
 		// Form is not valid, show an error message. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process        
 		document.getElementById("investment-box").reportValidity();
 	}
@@ -97,12 +99,14 @@ function getProfitLossAmount() {
 
 // Store in local storage the 'Total profit/loss' amount, summarising existing entries with all new entries
 function calculateTotalProfitLossAmount() {
+
 	// Check if the form is valid
 	if (document.getElementById("add-trade").checkValidity()) {
 		if (document.getElementById("total-investment").innerText === '0') {
 			alert("First enter investment! Cannot add trades without having an investment to trade!");
 			return;
 		} else {
+
 			// If form is valid and investment is entered, proceed with the following logic
 			let enteredProfitLossAmount = getProfitLossAmount();
 			let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
@@ -120,11 +124,10 @@ function calculateTotalProfitLossAmount() {
 			// Call the function to update the displayed profit/loss
 			updateProfitLoss();
 
-			// Clear the form once tade data stored 
-			clearAddTradeForm();
 		}
 	} else {
-		// If form is not valid, trigger error messages. 
+
+		// If form is not valid, trigger error messages
 		document.getElementById("add-trade").reportValidity();
 	}
 };
@@ -152,6 +155,7 @@ function calculateProfitLossPercent(currentInvestment, currentProfitLossAmount) 
 	} else {
 		profitLossPercent = Math.round((currentProfitLossAmount / currentInvestment) * 100) + "%";
 	}
+
 	// Display the result of the calculation 
 	document.getElementById("profit-loss-percent").innerText = profitLossPercent;
 };
@@ -173,6 +177,9 @@ function updateCurrentBalanceAndProfitLossPercent() {
 // Add an event listener to the 'Submit' button in the 'Add Trades' section to store form submission data in local storage
 document.getElementById("add-trade-button").addEventListener("click", function() {
 
+	// Check if the form is valid
+    if (document.getElementById("add-trade").checkValidity()) {
+
 	// Create an object to store trade details in local storage
 	let tradeData = {
 		openDate: document.getElementById("open-date").value,
@@ -181,34 +188,43 @@ document.getElementById("add-trade-button").addEventListener("click", function()
 		result: document.getElementById("result").value,
 		comments: document.getElementById("comments").value,
 	};
+
 	// Store trades data only if the investment amount was entered 
 	if (isInvestmentEntered()) {
 		storeTrade(tradeData);
 	}
 	displayTrades();
+	// Clear the form once tade data stored 
+	clearAddTradeForm();
+
+    } else {
+
+		//Form is not valid, show an error message
+	document.getElementById("add-trade").reportValidity();
+}
 });
 
 // Store trade details in local storage. Ensure trades do not get overwritten, but are stored as arrays. Source: https://blog.logrocket.com/localstorage-javascript-complete-guide/
 function storeTrade(tradeData) {
 
-	// Get existing trades from local storage.
+	// Get existing trades from local storage
 	let trades = localStorage.getItem("trades");
 
 	// Check if no trades exist.
 	if (trades === null) {
 
-		// Create an empty array if no trades exist, to store trades.
+		// Create an empty array if no trades exist, to store trades
 		trades = [];
 	} else {
 
-		// If trades exist, parse the trades value as an array.
+		// If trades exist, parse the trades value as an array
 		trades = JSON.parse(trades);
 	}
 
-	// Add each new trade to the array of trades.
+	// Add each new trade to the array of trades
 	trades.push(tradeData);
 
-	// Save the updated array back to local storage.
+	// Save the updated array back to local storage
 	localStorage.setItem("trades", JSON.stringify(trades));
 };
 
@@ -249,6 +265,7 @@ function clearAddTradeForm() {
 
 // Clear local storage and reset trade tracker
 document.getElementById("reset").addEventListener("click", function clearLocalStorage() {
+	
 	// Clear loclal storage
     localStorage.clear();
 

@@ -223,7 +223,14 @@ The site colors were also checked for accessibility to ensure they are color-bli
 
 ### Solved Bugs
 
+To ensure forms validation the Constraint validation was achieved using the Constraint Validation API described in the folloeing source:[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
+
+- The instructions on how to work with the local storage were taken from the following source: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/).
+
+
+
 ### Unsolved Bugs
+
 At present, to access the collapsible sections for making entries on mobile devices upon initial load, the buttons need to be clicked twice. Subsequent buttons respond with a single touch. However, after reloading the page, this behavior repeats itself. This occurs on both iOS and Android devices. In an attempt to resolve this and achieve buttons' response with a single click on initial load, various touch events were tested when adding event listeners to the buttons: 'click,' 'touchstart,' and 'touchend,' following instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events). Unfortunately, this did not alter the behavior, and the bug remains unresolved.
 
 ## Deployment
@@ -250,8 +257,16 @@ At present, to access the collapsible sections for making entries on mobile devi
 - The color palette for the site was selected using [Colormind tool](http://colormind.io/):
 - Paired font families were downloaded from [Google Fonts](https://fonts.google.com/).
 - Site colors accessibility was checked using [Adobe Color Accessibility Tool](<https://color.adobe.com/>).
-- Icon displayed on the Home page was taken from [Iconify](https://iconify.design).
 - The instructions on the usage of the 'button' type on buttons to prevent submissions and set custom functionality were taken from the following source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button).
-- To ensure forms validation the Constraint validation was achieved using the Constraint Validation API described in the folloeing source:[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
+- To ensure forms validation the Constraint validation was achieved using the Constraint Validation API described in the following source:[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
 - The instructions on how to work with the local storage were taken from the following source: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/).
+- When writing the code to store trades' details as objects to ensure the data stored as arrays and does not get overwritten, the following guide was used [LogRocket Frontend Analytics](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
+- To write the function to clear the 'Add new trade' form after a new trade is stored to the local storage the following source was used [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset).
+- To clear 'List of trades' table data, but to keep headings, when wrign the function to reset the application, the following instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) were used to target all table cells with trades' entered data.
+- When working on the bug with buttons that trigger collapsible sections to open, the instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events) were used.
+
+### Media
+- Icon displayed on the Home page was taken from [Iconify](https://iconify.design).
+
+
 

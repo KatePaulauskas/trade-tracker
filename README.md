@@ -15,7 +15,7 @@ The site's primary goal is to help traders to keep a track of their trading prog
 
 The layout of the Trade Tracker application was initially developed using Balsamiq Studios software, through which a mockup wireframe was created for the current project:
 
-![Trade Tracker wireframe](media/wireframe.jpeg)
+![Trade Tracker Wireframe](media/wireframe.jpeg)
 
 #### Color Palette
 
@@ -61,17 +61,17 @@ Below the heading, the entry area is positioned. It has a slightly different app
 
 On mobile devices, when users land on the site, they are greeted with the heading, followed by two vertically aligned buttons: 'Add Investment' and 'Add New Trade' These buttons feature a beige background with text in dark-blue, creating a consistent and contrasting look.
 
-![Entry Area on mobile](media/entry-area-mobile-closed.jpeg)
+![Entry Area on Mobile](media/entry-area-mobile-closed.jpeg)
 
 Clicking on either button expands additional collapsible sections for adding investments or logging trades. Each section has an 'Add' button. These collapsible areas retract upon pressing on each of the buttons once more.
 
-![Entry Area on mobile with collapsible areas opened](media/entry-area-mobile-open.jpeg)
+![Entry Area on Mobile with Collapsible Areas Opened](media/entry-area-mobile-open.jpeg)
 
 - **Larger Screens**
 
 On larger screens, collapsible sections are unnecessary due to the ample screen space, therefore the entry area is fully displayed. The buttons are replaced by headings, and entry fields placed underneath each heading, creating two forms: 'Add Investment' and 'Add New Trade'. For efficient space utilisation, the 'Add Investment' and 'Add New Trade' forms are positioned side by side. The 'Add Investment' form is on the left, intuitively guiding users to start there as they typically read from left to right.
 
-![Entry Area on desktop](media/entry-area-desktop.jpeg)
+![Entry Area on Desktop](media/entry-area-desktop.jpeg)
 
 ##### Add Investment
 
@@ -85,11 +85,11 @@ It prevents the user from submitting an empty form:
 
 The user can only add a positive number for the investment:
 
-![Enter positive amount to save investment](media/enter-positive-amount.jpeg)
+![Enter Positive Amount to Save Investment](media/enter-positive-amount.jpeg)
 
  And is a requirement before starting to add trades:
 
-![Fill out investment entry field](media/enter%20investment%20before%20adding%20trades.jpeg)
+![Fill Out Investment Entry Field](media/enter%20investment%20before%20adding%20trades.jpeg)
 
 ##### Add New Trade
 
@@ -101,11 +101,11 @@ The 'Add New Trade' form has 5 fields:
 - Profit/Loss amount: This can be a positive or negative amount, with a "-" sign if the user incurred a loss during the trade.
 - Comments: This field allows the user to make notes about the strategy used, emotions experienced during the trade, etc., which could help in analysing their trading strategy in the future. 
 
-![Add new trade](media/add-new-trade.jpeg)
+![Add New Trade](media/add-new-trade.jpeg)
 
 Each of the fields is required in the form and the form cannot be submitted without filling them in:
 
-![Add new trade form validation](media/add-trade-form-validation.jpeg)
+![Add New Trade Form Validation](media/add-trade-form-validation.jpeg)
 
 In addition, the user is not able to enter a loss that exceeds current balance, as typically broker would intervene and prevent the user from going into negative balance:
 
@@ -119,13 +119,13 @@ Directly beneath the entry area, a 'Summary' table is displayed. It offers a qui
  - 'Total profit/loss' amount rovides a summary of earnings or losses from all trades
  - The last line presents the '% Profit/Loss,' offering a convenient way to view results at a glance.
 
-![Summary table](media/summary-table.jpeg)
+![Summary Aable](media/summary-table.jpeg)
 
 #### List of Trades Table
 
 The list of trades is positioned below the 'Summary' table and displays data on all the trades entered. This allows the user to review past trades and analyse them using the comments, stock names, dates and results of each trade.
 
-![List of trades table](media/list-of-trades-table.jpeg)
+![List of Trades Table](media/list-of-trades-table.jpeg)
 
 #### Settings Section
 
@@ -137,6 +137,7 @@ The second button offers a reset option. By clicking on this, all data is erased
 
 A popup with instructions appears when clicking on the button 'Instructions' and can be closed by clicking on the button 'Close':
 
+![Instructions](media/instructions-popup.jpeg)
 
 
 #### Footer
@@ -260,7 +261,7 @@ The color palette for the site was selected using [Colormind tool](http://colorm
 
 However, after running the test to check the site text and icon colors against their backgrounds for contrast using the [Adoby Color Contrast Checker](https://color.adobe.com/create/color-contrast-analyzer), an issue was identified with one of the colors: 
 
-![Contrast Checker: gray on white](media/contrast-checker-gray-on-white.jpeg)
+![Contrast Checker: Gray on White](media/contrast-checker-gray-on-white.jpeg)
 
 Therefore a darker shade was chosen and the color #868289, which was used was used to display labels on the site's forms, was replaced with #535361:
 
@@ -270,19 +271,19 @@ The rest of the tests on the contrast between text colors against their backgrou
 
 Beige color on dark-blue background:
 
-![Beige on dark-blue](media/contrast-checker-beige-on-dark-blue.jpeg)
+![Beige on Dark-Blue](media/contrast-checker-beige-on-dark-blue.jpeg)
 
 Light-blue color on dark-blue background:
 
-![Light-blue on dark-blue](media/contrast-checker-light-blue-on-dark-blue.jpeg.jpeg)
+![Light-Blue on Dark-Blue](media/contrast-checker-light-blue-on-dark-blue.jpeg.jpeg)
 
 Dark-blue color on beige background:
 
-![Dark-blue on beige](media/contrast-checker-dark-blue-on-beige.jpeg)
+![Dark-Blue on Beige](media/contrast-checker-dark-blue-on-beige.jpeg)
 
 The site colors were also checked for accessibility to ensure they are color-blind safe using the [Adoby Color accessibility tool](https://color.adobe.com/create/color-accessibility), which returned the following result :'No conflicts found. Swatches are color blind safe':
 
-![Color blind safe test](media/color-blind-test.jpeg)
+![Color Blind Safe Test](media/color-blind-test.jpeg)
 
 
 ### Solved Bugs

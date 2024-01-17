@@ -103,7 +103,7 @@ The 'Add New Trade' form has 5 fields:
 
 ![Add new trade](media/add-new-trade.jpeg)
 
-"Each of the fields is required in the form and the form cannot be submitted without filling them in:
+Each of the fields is required in the form and the form cannot be submitted without filling them in:
 
 ![Add new trade form validation]()
 

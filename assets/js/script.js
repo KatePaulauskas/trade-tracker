@@ -87,9 +87,19 @@ function clearInvestmentBox() {
 	document.getElementById("investment-box").value = '';
 };
 
-// Add an event listener to the 'Add' button in the 'Add Trades' form to perform calculations for 'Summary' table
+// Add a single event listener to the 'Add' button in the 'Add Trades' form
 document.getElementById("add-trade-button").addEventListener("click", function() {
-	calculateTotalProfitLossAmount();
+    // Check if the form is valid
+    if (document.getElementById("add-trade").checkValidity()) {
+        // If form is valid, first handle the trade data storage
+        handleTradeDataStorage();
+
+        // Then perform the calculation for the 'Summary' table
+        calculateTotalProfitLossAmount();
+    } else {
+        // If form is not valid, trigger error messages
+        document.getElementById("add-trade").reportValidity();
+    }
 });
 
 // Get the 'Profit/loss amount' entered by the user in the form
@@ -101,7 +111,6 @@ function getProfitLossAmount() {
 function calculateTotalProfitLossAmount() {
 
 	// Check if the form is valid
-	if (document.getElementById("add-trade").checkValidity()) {
 		if (document.getElementById("total-investment").innerText === '0') {
 			alert("First enter investment! Cannot add trades without having an investment to trade!");
 			return;
@@ -125,11 +134,6 @@ function calculateTotalProfitLossAmount() {
 			updateProfitLoss();
 
 		}
-	} else {
-
-		// If form is not valid, trigger error messages
-		document.getElementById("add-trade").reportValidity();
-	}
 };
 
 // Display the 'Total Profit/loss'
@@ -174,35 +178,27 @@ function updateCurrentBalanceAndProfitLossPercent() {
 	calculateProfitLossPercent(currentInvestment, currentProfitLossAmount);
 };
 
-// Add an event listener to the 'Submit' button in the 'Add Trades' section to store form submission data in local storage
-document.getElementById("add-trade-button").addEventListener("click", function() {
+// Function to handle data storage for entered trades
+function handleTradeDataStorage () {
 
-	// Check if the form is valid
-    if (document.getElementById("add-trade").checkValidity()) {
+		// Create an object to store trade details in local storage
+		let tradeData = {
+			openDate: document.getElementById("open-date").value,
+			closeDate: document.getElementById("close-date").value,
+			stockName: document.getElementById("stock").value,
+			result: document.getElementById("result").value,
+			comments: document.getElementById("comments").value,
+		};
 
-	// Create an object to store trade details in local storage
-	let tradeData = {
-		openDate: document.getElementById("open-date").value,
-		closeDate: document.getElementById("close-date").value,
-		stockName: document.getElementById("stock").value,
-		result: document.getElementById("result").value,
-		comments: document.getElementById("comments").value,
-	};
-
-	// Store trades data only if the investment amount was entered 
-	if (isInvestmentEntered()) {
-		storeTrade(tradeData);
-	}
-	displayTrades();
-	// Clear the form once tade data stored 
-	clearAddTradeForm();
-
-    } else {
-
-		//Form is not valid, show an error message
-	document.getElementById("add-trade").reportValidity();
-}
-});
+		// Store trades data only if the investment amount was entered 
+		if (isInvestmentEntered()) {
+			storeTrade(tradeData);
+		}
+		displayTrades();
+		
+		// Clear the form once tade data stored 
+		clearAddTradeForm();
+};
 
 // Store trade details in local storage. Ensure trades do not get overwritten, but are stored as arrays. Source: https://blog.logrocket.com/localstorage-javascript-complete-guide/
 function storeTrade(tradeData) {

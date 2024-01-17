@@ -98,7 +98,7 @@ The 'Add New Trade' form has 5 fields:
 - Open date
 - Close date
 - Stock Name
-- Profit/Loss amount: This can be a positive or negative amount, with a "-" sign if the user incurred a loss during the trade.
+- Profit/Loss amount: This can be a positive or negative amount, with a minus sign if the user incurred a loss during the trade.
 - Comments: This field allows the user to make notes about the strategy used, emotions experienced during the trade, etc., which could help in analysing their trading strategy in the future. 
 
 ![Add New Trade](media/add-new-trade.jpeg)
@@ -116,7 +116,7 @@ In addition, the user is not able to enter a loss that exceeds current balance, 
 Directly beneath the entry area, a 'Summary' table is displayed. It offers a quick overview of the user's trading journal, highlighting progress and current standing. The table shows:
  - The 'Total Investment' amount made.
  - The 'Current Balance' summarizes the investments and trades made.
- - 'Total profit/loss' amount rovides a summary of earnings or losses from all trades
+ - 'Total profit/loss' amount rovides a summary of earnings or losses from all trades.
  - The last line presents the '% Profit/Loss,' offering a convenient way to view results at a glance.
 
 ![Summary Aable](media/summary-table.jpeg)
@@ -377,7 +377,7 @@ At present, to access the collapsible sections for making entries on mobile devi
     4. After that on the right-hand side, I located the Deployments section and clicked on 'github-pages'.
     5. I clicked on the square with an arrow pointing to the upper right corner against the last deployment on the right and was able to see my project live.
 
-    The live link to the site can be found at the following URL: [Trade Tracker](https://katepaulauskas.github.io/trade-tracker/)
+    The live link to the site can be found at the following URL: [Trade Tracker](https://katepaulauskas.github.io/trade-tracker/).
 
 ## Credits
 
@@ -391,7 +391,7 @@ At present, to access the collapsible sections for making entries on mobile devi
 - The instructions on the usage of the 'button' type on buttons to prevent submissions and set custom functionality were taken from the following source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button).
 - To ensure forms validation the Constraint validation was achieved using the Constraint Validation API described in the following source:[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
 - Instructions on how to work with the local storage were taken from the following source: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/).
-- When writing the code to store trade details as objects and ensuring the data is stored as arrays and does not get overwritten, the following guide was used [LogRocket Frontend Analytics](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
+- When writing the code to store trade details as objects and ensuring the data is stored as arrays and does not get overwritten, the following guide was used [LogRocket Frontend Analytics](https://blog.logrocket.com/localstorage-javascript-complete-guide/).
 - To write the function to clear the 'Add new trade' form after a new trade is stored to the local storage the following source was used [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset).
 - To clear 'List of trades' table data, but to keep headings, when writing the function to reset the application, the following instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) were used to target all table cells with trades' entered data.
 - When working on the bug with buttons that trigger collapsible sections to open, instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events) were used.

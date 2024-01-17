@@ -1,22 +1,23 @@
-# Trade tracker
+# Trade Tracker
 
-The Trade Tracker site is designed to assist stock traders in monitoring their trading journey by offering a tracking system which allows to overview and control the invested amounts and profit or loss incurred during their trading. It also provides a a summary on the total amount invested, the total profit or loss made, based on which the current balance and profit/loss percent are calculated.
+The Trade Tracker site is designed to assist stock traders in monitoring their trading journey by offering a tracking system which allows to overview and control the invested amounts and profit or loss incurred during their trading. It also provides a a summary on the total amount invested, the total profit or loss made, based on which the current balance and profit/loss percent are calculated. Additionaly, a list of performed trades cab be viewed and analised.
 
-The site's target audience would be anyone involved in stock trading. It is suitable for those, who look to maintain a record of their investments and results of the trades they made. Also those, who seeks to keep a trading journal and see a quick overview of their current investment portfolio. 
+The site's target audience would be anyone involved in stock trading. It is suitable for those, who look to maintain a record of their investments and results of the trades they made. Also those, who seeks to keep a trading journal and see a quick overview of their current investment portfolio and actions taken.
 
-The site's primary goal is to help traders to keep a track of their trading progress and demonstrate a summary based on their current progress.
+The site's primary goal is to help traders to keep a track of their trading progress and demonstrate a summary based on their current progress, based on which trading strategy could be analised, succesfull actions identtified and further adjustments in the tradign stategy determined, if needed.
 
 ![Responsive Mockup](media/responsive-mockup.jpeg)
 
+
 ### Design
 
-#### Project wireframe
+#### Project Wireframe
 
 The layout of the Trade Tracker application was initially developed using Balsamiq Studios software, through which a mockup wireframe was created for the current project:
 
 ![Trade Tracker wireframe](media/wireframe.jpeg)
 
-#### Color palette
+#### Color Palette
 
 The colors for Trade tracker were carefully selected using [Colormind tool](http://colormind.io/) to create a balanced, sophisticated palette that is both professional and user-friendly. The blend of warm and cool tones, along with the varying intensities of color, makes the site look modern, trustworthy, and accessible, creating the feeling of confidence and comfort.
 
@@ -28,16 +29,16 @@ The colors for Trade tracker were carefully selected using [Colormind tool](http
 
 - **#A3B0BF:** This color is used for H2, H3, and paragraph colors. It adds a sense of calm and approachability to the website.
 
-- **#535361 & #8A8FA1:** The remaining two colors are used for smaller elements on the site, for instance, labels' text color on the forms, table design, buttons' background on hover, etc., and help to add the final touch to the entire palette and ensure the site looks professional, reliable, accessible, and welcoming.
+- **#535361 & #8A8FA1:** The remaining two colors are used for smaller elements on the site, for instance, label text color on the forms, table design, buttons' background on hover, etc., and help to add the final touch to the entire palette and ensure the site looks professional, reliable, accessible, and welcoming.
 
 #### Fonts
 
-The fonts for the site were selected using font pairing service [Font Joy](https://fontjoy.com/). The chosen forns are aimed at making Trading Tracker site appear both professional and user-friendly. The combination of Averia Gruesa Libre's approachability, Expletus Sans's creativity, and Josefin Sans's readability helps to create a balanced and engaging visual appearance of the site. 
+The fonts for the site were selected using font pairing service [Font Joy](https://fontjoy.com/). The chosen fonts are aimed at making Trading Tracker site appear both professional and user-friendly. The combination of Averia Gruesa Libre's approachability, Expletus Sans's creativity, and Josefin Sans's readability helps to create a balanced and engaging visual appearance of the site. 
 
-![Font Paring](media/fonts.png)
+![Font Pairing](media/fonts.png)
 
 
- - **Averia Gruesa Libre** is a bold and slightly playful font. Its uniqueness lies in its hand-drawn style, which adds a personal and friendly  touch to the Trade Tracker site. Using it for H1 heading ensures that it stands out and grabs attention, making the site feel more welcoming.
+ - **Averia Gruesa Libre** is a bold and slightly playful font. Its uniqueness lies in it's hand-drawn style, which adds a personal and friendly  touch to the Trade Tracker site. Using it for the H1 heading ensures that it stands out and grabs attention, making the site feel more welcoming.
 
 - **Expletus Sans** is a decorative and playful font. It has a unique character, with a lively and approachable appearance. This font was chosen for H2 and H3 headings to maintain readability while adding a touch of personality. 
 
@@ -65,7 +66,6 @@ On mobile devices, when users land on the site, they are greeted with the headin
 Clicking on either button expands additional collapsible sections for adding investments or logging trades. Each section has an 'Add' button. These collapsible areas retract upon pressing on each of the buttons once more.
 
 ![Entry Area on mobile with collapsible areas opened](media/entry-area-mobile-open.jpeg)
-
 
 - **Larger Screens**
 
@@ -105,13 +105,13 @@ The 'Add New Trade' form has 5 fields:
 
 Each of the fields is required in the form and the form cannot be submitted without filling them in:
 
-![Add new trade form validation]()
+![Add new trade form validation](media/add-trade-form-validation.jpeg)
 
 In addition, the user is not able to enter a loss that exceeds current balance, as typically broker would intervene and prevent the user from going into negative balance:
 
 ![](media/loss-cannot-exceed-current-balance.jpeg)
 
-#### Summary table
+#### Summary Table
 
 Directly beneath the entry area, a 'Summary' table is displayed. It offers a quick overview of the user's trading journal, highlighting progress and current standing. The table shows:
  - The 'Total Investment' amount made.
@@ -121,13 +121,13 @@ Directly beneath the entry area, a 'Summary' table is displayed. It offers a qui
 
 ![Summary table](media/summary-table.jpeg)
 
-#### List of trades table
+#### List of Trades Table
 
 The list of trades is positioned below the 'Summary' table and displays data on all the trades entered. This allows the user to review past trades and analyse them using the comments, stock names, dates and results of each trade.
 
 ![List of trades table](media/list-of-trades-table.jpeg)
 
-#### Settings section
+#### Settings Section
 
 Towards the bottom of the page, there are two buttons. One of them provides instructions on how to use the Trade Tracker, which can be helpful for new users or those who are unsure about how to use the application effectively. 
 
@@ -146,13 +146,14 @@ At the bottom of the page, a footer is positioned, containing a link to the GitH
 
 The following features could be implemented to further advance the Trade Tracker functionality and improve user experience:
 
-1. Initially to was planned to create a chart showing progress over time and displaying i under the 'Summary' table. However, due to time constraints and the complexity of the setup, it was decided to move it under future features and replace it with a table of entered trades.
+1. Initially it was planned to create a chart showing progress over time and displaying it under the 'Summary' table. However, due to time constraints and the complexity of the setup, it was decided to move it under future features and replace it with a table of entered trades.
 2. Display a log of investments along with their respective dates.
 3. Add an option to withdraw from the current balance.
 4. Display negative numbers in a different color (red) for clarity.
 5. Show alerts when the % profit/loss is negative. Offer suggestions to change or improve the trading strategy, and recommend articles and educational videos on strategy improvement.
 6. Offer data storage on the backend. Add a login bar for the members' area, allowing the Trade Tracker to be accessed through any browser. Users can log into their accounts and access their records.
 7. Provide a dropdown menu for users to choose their preferred currency for display, ensuring that values are shown in a monetary format rather than as plain numbers.
+
 
 ## Testing
 
@@ -181,13 +182,13 @@ Action/Feature          | Expected behavior       | Status         |
 |Fill out the 'Open date', 'Close date', 'Stock name' and 'Profit/loss amount' fields only, and click 'Add' | Please fill in this field' appears in the 'Comments' input field | Pass |
 |Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use positive amount) and 'Comments', click 'Add' | If the investment was not entered in the 'Add investment' form, the alert appears on the screen: 'First enter investment! Cannot add trades without having an investment to trade!' | Pass
 |Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the investment was not entered in the 'Add investment' form, the alert appears on the screen: 'First enter investment! Cannot add trades without having an investment to trade!' | Pass
-|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use positive amount) and 'Comments', click 'Add' | If the investment was entered in the 'Add investment' form, 3 values are calculated and updated in the 'Summary' table: 'Current balance' 'Total profit/loss', '% profit/loss'. Trade ditails are displaied in the 'List of trades' table | Pass |
+|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use positive amount) and 'Comments', click 'Add' | If the investment was entered in the 'Add investment' form, 3 values are calculated and updated in the 'Summary' table: 'Current balance' 'Total profit/loss', '% profit/loss'. Trade ditails are displayed in the 'List of trades' table | Pass |
 |Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the investment was entered in the 'Add investment' form, and the negative/loss amount of the trade exceeds the 'Current balance' amount, the following alert appears: 'The loss amount cannot exceed the Current balance, please check your entry!' | Pass |
-|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the investment was entered in the 'Add investment' form, and the negative/loss amount of the trade does not exceed the 'Current balance', the amount is deducted from the 'Current balance' field, 'Total investment'and '% profit/loss' are recalculated and updated accordingly. Trade ditails are displaied in the 'List of trades' table | Pass |
-|Add second trade by filling in all input fields: in the  'Add new trade' form: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use positive amount) and 'Comments', click 'Add' | Three values are updated in the 'Summary' table: 'Current balance' 'Total profit/loss', '% profit/loss'. Trade ditails are displaied in the 'List of trades' table below the previouse trade entry | Pass |
+|Fill out all input fields: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use negative amount) and 'Comments', click 'Add' | If the investment was entered in the 'Add investment' form, and the negative/loss amount of the trade does not exceed the 'Current balance', the amount is deducted from the 'Current balance' field, 'Total investment'and '% profit/loss' are recalculated and updated accordingly. Trade ditails are displayed in the 'List of trades' table | Pass |
+|Add second trade by filling in all input fields: in the  'Add new trade' form: 'Open date', 'Close date', 'Stock name', 'Profit/loss amount' (use positive amount) and 'Comments', click 'Add' | Three values are updated in the 'Summary' table: 'Current balance' 'Total profit/loss', '% profit/loss'. Trade ditails are displayed in the 'List of trades' table below the previouse trade entry | Pass |
 |The tables 'Summary' and 'List of trades' was tested on mobile and larger devices in multiple browsers |
-|Reload the page after the investment amount has been entered through the 'Add investment' form | 'Total investment' and 'Current balance' values are displaied in the 'Summary' table, as have have been stored in the local storage and displaied after the reload | Pass | 
-|Reload the page after the investment amount has been entered through the 'Add investment' form and at least one trade was added through the  'Add new trade' form | All four values are displaied in the Summary table: 'Total investment', 'Current balance', 'Total profit/loss', and '% profit/loss'. Trade ditails are displaied in the 'List of trades' table. This means all data have been stored in the local storage and displaied after the reload | Pass | 
+|Reload the page after the investment amount has been entered through the 'Add investment' form | 'Total investment' and 'Current balance' values are displayed in the 'Summary' table, as they have been stored in the local storage and displayed after the reload | Pass | 
+|Reload the page after the investment amount has been entered through the 'Add investment' form and at least one trade was added through the  'Add new trade' form | All four values are displayed in the Summary table: 'Total investment', 'Current balance', 'Total profit/loss', and '% profit/loss'. Trade ditails are displayed in the 'List of trades' table. This means all data have been stored in the local storage and displayed after the reload | Pass | 
 |Settings section was tested on mobile and larger devices in multiple browsers|
 |Click on the button 'Instructions' | Popup with instructions on how to use Trade Tracker appears on the screen | Pass |
 |Click on the 'Close' button on the popup with the instructions | Popup disappears | Pass |
@@ -195,13 +196,12 @@ Action/Feature          | Expected behavior       | Status         |
 | Footer link was tested on mobile and larger devices in multiple browsers |	
 | Click on the GitHub icon in the footer |	External link leading to GitHub page opens in a new page |	Pass |
 
+
 ### Validator Testing
 
 #### HTML
 
 In an attempt to adhere to web standards and accessibility, the site was submitted to [W3C validation testing](<https://validator.w3.org/nu/?doc=https%3A%2F%2Fkatepaulauskas.github.io%2Ftrade-tracker%2F>). No errors were identified. However, there were 18 warnings about trailing slash on void elements, which were fixed by removing the trailing slash and extra space.
-
-
 
 #### CSS
 
@@ -227,7 +227,7 @@ Initially, the test returned the score of 91 for Accessibility on mobile. Perfor
 
 In attempt to improve the Accessibility score on mobile the background color of the buttons to open 'Investment' and 'New Trade' sections was changed to improve the contrast between the text on the buttons and their colors. 
 
-As a result, Accessibility was improved and resulted in the score of 100: 
+As a result, Accessibility was improved and resulted in a score of 100: 
 
 ![Mobile Improved Accessibility Test](media/lighthouse-mobile-improved.jpeg)
  on mobile, to increase contrast and improve accessibility.
@@ -246,6 +246,7 @@ In an attempt to improve the Accessibility score on desktop, a darker shade was 
 As a result, Accessibility on desktop was improved and resulted in the score of 100:
 
 ![Desktop Improved Accessibility Test](media/lighthouse-desktop-improved.jpeg)
+
 
 #### Site Colors Accessibility
 
@@ -282,11 +283,77 @@ The site colors were also checked for accessibility to ensure they are color-bli
 
 ### Solved Bugs
 
-1. When working with the 'Add Investment' and 'Add New Trade' entry forms, the buttons' type was changed from 'submit' to 'button' as forms submission wasn't necessary, and the 'button' type seemed more suitable for locally storing data entered in the forms. However, it was later discovered that this change disabled the forms' validation functionality. Further research into the topic revealed that constraint validation could still be achieved using the Constraint Validation API, as described in the following source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process), which provided guidance on resolving the issue.
+1. When working with the 'Add Investment' and 'Add New Trade' entry forms, the buttons' type was changed from 'submit' to 'button' as form submission wasn't necessary, and the 'button' type seemed more suitable for locally storing data entered in the forms. However, it was later discovered that this change disabled the forms' validation functionality. Further research into the topic revealed that constraint validation could still be achieved using the Constraint Validation API, as described in the following source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process), which provided guidance on resolving the issue.
 
-2. The current project required the use of local storage and implementation of JSON functions, which were out of my scope. However, the inspiration drawn from the project idea led to further research on this topic. In working with local storage and JSON functions, two key sources were instrumental in bridging knowledge gaps on this previously out-of-scope topics: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/) and [LogRocket Frontend Analytics](https://blog.logrocket.com/localstorage-javascript-complete-guide/).
+2. The current project required the use of local storage and implementation of JSON functions, which were beyond of my scope. However, the inspiration drawn from the project idea led to further research on this topic. While working with local storage and JSON functions, two key sources were instrumental in bridging knowledge gaps on this previously out-of-scope topics: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/) and [LogRocket Frontend Analytics](https://blog.logrocket.com/localstorage-javascript-complete-guide/).
 
+3. An event listener was added twice to the 'Add' button in the 'Add Trades' form to store tades data in local storage and to performing calculations for the 'Summary' table. In both cases, form validation was required and was set using Constraint Validation API. During testing, it was noticed that validation was no longer displaid on the form in Safari browser. It was decided to combine two event listeners added to the 'Add' button in the 'Add Trades' form in attempt to resolve form validation conflict in Safari browser, which was successful.
 
+ __Before:__
+
+ - Event listener No 1
+
+```   
+// Add an event listener to the 'Add' button in the 'Add Trades' form to perform calculations for 'Summary' table
+
+document.getElementById("add-trade-button").addEventListener("click", function() {
+	calculateTotalProfitLossAmount();
+});
+```
+
+ - Event listener No 2
+
+```// Add an event listener to the 'Submit' button in the 'Add Trades' section to store form submission data in local storage
+document.getElementById("add-trade-button").addEventListener("click", function() {
+
+	// Check if the form is valid
+	if (document.getElementById("add-trade").checkValidity()) {
+
+		// Create an object to store trade details in local storage
+		let tradeData = {
+			openDate: document.getElementById("open-date").value,
+			closeDate: document.getElementById("close-date").value,
+			stockName: document.getElementById("stock").value,
+			result: document.getElementById("result").value,
+			comments: document.getElementById("comments").value,
+		};
+
+		// Store trades data only if the investment amount was entered 
+		if (isInvestmentEntered()) {
+			storeTrade(tradeData);
+		}
+		displayTrades();
+		// Clear the form once tade data stored 
+		clearAddTradeForm();
+
+	} else {
+
+		//Form is not valid, show an error message
+		document.getElementById("add-trade").reportValidity();
+	}
+});
+```
+
+__After:__
+
+```// Add event listener to the 'Add' button in the 'Add Trades' form to store tades data in local storage and perform calculations for the 'Summary' table
+document.getElementById("add-trade-button").addEventListener("click", function() {
+
+    // Check if the form is valid
+    if (document.getElementById("add-trade").checkValidity()) {
+
+        // If form is valid, first handle the trade data storage
+        handleTradeDataStorage();
+
+        // Then perform the calculation for the 'Summary' table
+        calculateTotalProfitLossAmount();
+    } else {
+
+        // If form is not valid, trigger error messages
+        document.getElementById("add-trade").reportValidity();
+    }
+});
+```
 
 ### Unsolved Bugs
 
@@ -294,7 +361,7 @@ At present, to access the collapsible sections for making entries on mobile devi
 
 ## Deployment
 
-- The current project was deployed to GutHub pages through the following deployment steps:
+- The current project was deployed to GitHub Pages through the following deployment steps:
     1. I navigated to the settings tab in the GitHub repository.
     2. In the Code and automation section on the left-hand sidebar, I selected Pages.
        - I set Source to 'Deploy from a branch'.
@@ -315,17 +382,14 @@ At present, to access the collapsible sections for making entries on mobile devi
 - To select the fonts for the site, a font pairing service was used: [Font Joy](https://fontjoy.com/).
 - The color palette for the site was selected using [Colormind tool](http://colormind.io/):
 - Paired font families were downloaded from [Google Fonts](https://fonts.google.com/).
-- Site colors accessibility was checked using [Adobe Color Accessibility Tool](<https://color.adobe.com/>).
+- Site colors accessibility was checked using [Adobe Color Accessibility Tool](https://color.adobe.com/).
 - The instructions on the usage of the 'button' type on buttons to prevent submissions and set custom functionality were taken from the following source: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button).
 - To ensure forms validation the Constraint validation was achieved using the Constraint Validation API described in the following source:[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
-- The instructions on how to work with the local storage were taken from the following source: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/).
-- When writing the code to store trades' details as objects to ensure the data stored as arrays and does not get overwritten, the following guide was used [LogRocket Frontend Analytics](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
+- Instructions on how to work with the local storage were taken from the following source: [freeCodeCamp](https://www.freecodecamp.org/news/web-storage-localstorage-vs-sessionstorage-in-javascript/).
+- When writing the code to store trade details as objects and ensuring the data is stored as arrays and does not get overwritten, the following guide was used [LogRocket Frontend Analytics](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
 - To write the function to clear the 'Add new trade' form after a new trade is stored to the local storage the following source was used [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset).
-- To clear 'List of trades' table data, but to keep headings, when wrign the function to reset the application, the following instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) were used to target all table cells with trades' entered data.
-- When working on the bug with buttons that trigger collapsible sections to open, the instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events) were used.
+- To clear 'List of trades' table data, but to keep headings, when writing the function to reset the application, the following instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) were used to target all table cells with trades' entered data.
+- When working on the bug with buttons that trigger collapsible sections to open, instructions from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events) were used.
 
 ### Media
 - Icon displayed on the Home page was taken from [Iconify](https://iconify.design).
-
-
-

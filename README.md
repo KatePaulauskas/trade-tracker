@@ -135,6 +135,10 @@ The second button offers a reset option. By clicking on this, all data is erased
 
 ![Settings](media/settings.jpeg)
 
+A popup with instructions appears when clicking on the button 'Instructions' and can be closed by clicking on the button 'Close':
+
+
+
 #### Footer
 
 At the bottom of the page, a footer is positioned, containing a link to the GitHub URL of the current project.

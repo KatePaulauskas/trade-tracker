@@ -1,142 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Meta tags for search engine optimisation -->
-        <meta name="description" content="Track your trading progress and analyze your performance with Trade Tracker. Trade Tracker helps you to record, monitor, and control your trades, generate a summary of your trading journey, track your profit and loss, and as a result enhance your trading strategy.">
-        <meta name="keywords" content="Stock trading tracker, trading journal, stock portfolio tracker, investment tracker, monitor trading progress, profit loss calculator">
-        <!-- Add title tag / browser tab title -->
-        <title>Trade Tracker</title>
-        <!-- Fivacon -->
-        <link rel="icon" href="assets/favicon/trade-tracker-favicon-48x48.webp" type="image/webp">
-        <!-- Stylesheet -->
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <main>
-            <!-- Heading -->
-            <h1 class="heading">
-                <iconify-icon icon="icon-park-outline:stock-market"></iconify-icon>Trade Tracker
-            </h1>
-            <!-- Entry Area -->
-            <section class="entry-area">
-                <!-- Investment Section -->
-                <div class="update-investment">
-                    <!-- Heading to be used on larger screens instead of button -->
-                    <h2 class="investment">Add investment</h2>
-                    <!-- Button for mobile only -->
-                    <button class="new-entry" title="Click to enter investment">Add investment</button>
-                    <div class="collapsable-entry-area">
-                        <form id="investment-form">
-                            <input type="number" name="investment-box" id="investment-box" placeholder="Enter the amount" required>
-                            <div class="investment-action-buttons">
-                                <!-- Set button to 'button' type to prevent submissions. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button -->
-                                <button id="add-investment" type="button" title="Click add to save the investment">Add</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- Add Trades Section -->
-                <div class="add-trades">
-                    <!-- Heading to be used on larger screens instead of button -->
-                    <h2 class="new-trade">Add new trade</h2>
-                    <!-- Button for mobile only -->
-                    <button class="new-entry" title="Click to enter a new trade">Add new trade</button>
-                    <div class="collapsable-entry-area">
-                        <form id="add-trade">
-                            <label for="open-date">Open date</label>
-                            <input type="date" name="open-date" id="open-date" class="date-input" required>
-                            <br>
-                            <label for="close-date">Close date</label>
-                            <input type="date" name="close-date" id="close-date" class="date-input" required>
-                            <br>
-                            <label for="stock">Stock name</label>
-                            <input type="text" name="stock" id="stock" class="date-input" placeholder="Enter stock name" required>
-                            <br>
-                            <label for="result">Profit/loss amount</label>
-                            <input type="number" name="result" id="result" class="date-input" placeholder="Enter amount" required>
-                            <br>
-                            <label for="comments">Comments</label>
-                            <input type="text" name="comments" id="comments" class="date-input" placeholder="Add comment" required>
-                            <br>
-                            <button type="button" id="add-trade-button" title="Click add to save the new trade">Add</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <!-- Summary Section -->
-            <section class="summary">
-                <h3 class="trading-summary">Summary</h3>
-                <table id="summary-table">
-                    <tr>
-                        <th>Total Investment</th>
-                        <td id="total-investment">0</td>
-                    </tr>
-                    <tr>
-                        <th>Current balance</th>
-                        <td id="current-balance">0</td>
-                    </tr>
-                    <tr>
-                        <th>Total profit/loss</th>
-                        <td id="total-profit-loss">0</td>
-                    </tr>
-                    <tr>
-                        <th>% profit/loss</th>
-                        <td id="profit-loss-percent">0</td>
-                    </tr>
-                </table>
-            </section>
-            <!--  List of trades -->
-            <section class="list-of-trades">
-                <h3 class="trades">List of trades</h3>
-                <table id="list-of-trades">
-                    <thead>
-                        <tr>
-                            <th>Trade details</th>
-                            <th>Result</th>
-                        </tr>
-                    </thead>
-                    <tbody id="trades-summary">
-                        <tr>
-                            <td>text</td>
-                            <td>0</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <!-- Settings Section -->
-            <div id="settings">
-                <button id="instructions" class="settings" title="Click to open instructions" onclick="displayPopup()">Instructions</button>
-                <button id="reset" class="settings" title="Click to reset the Trading Tracker">Reset</button>
-            </div>
-            <div id="instructions-popup">
-                <div id="popup-content">
-                  <h3>Instructions on how to use Trade Tracker:</h3>
-                    <ol>
-                        <li>To start tracking your trades, first add a positive amount as your initial investment</li>
-                        <li>Investment can be topped up at any point</li>
-                        <li>Keep on adding your closed trades by entering the required details</li>
-                        <li>See a summary of your trading progress instantly by checking the 'Summary' table</li>
-                        <li>Check all you logged trades by referring to the 'List of trades' table</li>
-                        <li>Your data is stored in the local storage of your browser and loads automatically when you revisit the site.</li>
-                        <li>To erase all the data and start from scratch, simply hit the 'Reset' button. </li>
-                    </ol>
-                    <button id="close-popup" class="settings" title="Close popup" onclick="closePopup()">Close</button>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags for search engine optimisation -->
+    <meta name="description"
+        content="Track your trading progress and analyze your performance with Trade Tracker. Trade Tracker helps you to record, monitor, and control your trades, generate a summary of your trading journey, track your profit and loss, and as a result enhance your trading strategy.">
+    <meta name="keywords"
+        content="Stock trading tracker, trading journal, stock portfolio tracker, investment tracker, monitor trading progress, profit loss calculator">
+    <!-- Add title tag / browser tab title -->
+    <title>Trade Tracker</title>
+    <!-- Fivacon -->
+    <link rel="icon" href="assets/favicon/trade-tracker-favicon-48x48.webp" type="image/webp">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Heading -->
+        <h1 class="heading">
+            <iconify-icon icon="icon-park-outline:stock-market"></iconify-icon>Trade Tracker
+        </h1>
+        <!-- Entry Area -->
+        <section class="entry-area">
+            <!-- Investment Section -->
+            <div class="update-investment">
+                <!-- Heading to be used on larger screens instead of button -->
+                <h2 class="investment">Add investment</h2>
+                <!-- Button for mobile only -->
+                <button class="new-entry" title="Click to enter investment">Add investment</button>
+                <div class="collapsable-entry-area">
+                    <form id="investment-form">
+                        <input type="number" name="investment-box" id="investment-box" placeholder="Enter the amount"
+                            required>
+                        <div class="investment-action-buttons">
+                            <!-- Set button to 'button' type to prevent submissions. Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button -->
+                            <button id="add-investment" type="button"
+                                title="Click add to save the investment">Add</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </main>
-        <!-- Footer -->
-        <footer>
-            <div class="footer">
-                <a href="https://github.com/KatePaulauskas/trade-tracker" target="_blank" rel="noopener" aria-label="Visit Github page for this project (opend in a new tab)">
-                    <iconify-icon icon="bi:github" style="color: #2b3c4b;" width="35"></iconify-icon>
-                </a>
+            <!-- Add Trades Section -->
+            <div class="add-trades">
+                <!-- Heading to be used on larger screens instead of button -->
+                <h2 class="new-trade">Add new trade</h2>
+                <!-- Button for mobile only -->
+                <button class="new-entry" title="Click to enter a new trade">Add new trade</button>
+                <div class="collapsable-entry-area">
+                    <form id="add-trade">
+                        <label for="open-date">Open date</label>
+                        <input type="date" name="open-date" id="open-date" class="date-input" required>
+                        <br>
+                        <label for="close-date">Close date</label>
+                        <input type="date" name="close-date" id="close-date" class="date-input" required>
+                        <br>
+                        <label for="stock">Stock name</label>
+                        <input type="text" name="stock" id="stock" class="date-input" placeholder="Enter stock name"
+                            required>
+                        <br>
+                        <label for="result">Profit/loss amount</label>
+                        <input type="number" name="result" id="result" class="date-input" placeholder="Enter amount"
+                            required>
+                        <br>
+                        <label for="comments">Comments</label>
+                        <input type="text" name="comments" id="comments" class="date-input" placeholder="Add comment"
+                            required>
+                        <br>
+                        <button type="button" id="add-trade-button" title="Click add to save the new trade">Add</button>
+                    </form>
+                </div>
             </div>
-        </footer>
-        <!-- IconifyIcon web component -->
-        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-        <script src="assets/js/script.js"></script>
-    </body>
+        </section>
+        <!-- Summary Section -->
+        <section class="summary">
+            <h3 class="trading-summary">Summary</h3>
+            <table id="summary-table">
+                <tr>
+                    <th>Total Investment</th>
+                    <td id="total-investment">0</td>
+                </tr>
+                <tr>
+                    <th>Current balance</th>
+                    <td id="current-balance">0</td>
+                </tr>
+                <tr>
+                    <th>Total profit/loss</th>
+                    <td id="total-profit-loss">0</td>
+                </tr>
+                <tr>
+                    <th>% profit/loss</th>
+                    <td id="profit-loss-percent">0</td>
+                </tr>
+            </table>
+        </section>
+        <!--  List of trades -->
+        <section class="list-of-trades">
+            <h3 class="trades">List of trades</h3>
+            <table id="list-of-trades">
+                <thead>
+                    <tr>
+                        <th>Trade details</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="trades-summary">
+                    <tr>
+                        <td>text</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- Settings Section -->
+        <div id="settings">
+            <button id="instructions" class="settings" title="Click to open instructions"
+                onclick="displayPopup()">Instructions</button>
+            <button id="reset" class="settings" title="Click to reset the Trading Tracker">Reset</button>
+        </div>
+        <div id="instructions-popup">
+            <div id="popup-content">
+                <h3>Instructions on how to use Trade Tracker:</h3>
+                <ol>
+                    <li>To start tracking your trades, first add a positive amount as your initial investment</li>
+                    <li>Investment can be topped up at any point</li>
+                    <li>Keep on adding your closed trades by entering the required details</li>
+                    <li>See a summary of your trading progress instantly by checking the 'Summary' table</li>
+                    <li>Check all you logged trades by referring to the 'List of trades' table</li>
+                    <li>Your data is stored in the local storage of your browser and loads automatically when you
+                        revisit the site.</li>
+                    <li>To erase all the data and start from scratch, simply hit the 'Reset' button. </li>
+                </ol>
+                <button id="close-popup" class="settings" title="Close popup" onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <a href="https://github.com/KatePaulauskas/trade-tracker" target="_blank" rel="noopener"
+                aria-label="Visit Github page for this project (opend in a new tab)">
+                <iconify-icon icon="bi:github" style="color: #2b3c4b;" width="35"></iconify-icon>
+            </a>
+        </div>
+    </footer>
+    <!-- IconifyIcon web component -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
 </html>

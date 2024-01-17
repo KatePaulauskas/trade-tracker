@@ -1,6 +1,6 @@
 // Ensure DOM is fully loaded before running Trading Tracker functions
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
 	// Locate all buttons with the "new-entry" class
 	const allNewEntryButtons = document.getElementsByClassName("new-entry");
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		// Add a click event listener to each button with the "new-entry" class
 		// 'Click' event listener replaced with 'touchstart' to test if it improves user experience on mobile. Source: https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events
-		button.addEventListener("touchstart", function() {
+		button.addEventListener("touchstart", function () {
 
 			// Target the next sibling elements (collapsible entry areas) in the DOM after buttons with the "new-entry" class
 			const collapsibleEntryArea = this.nextElementSibling;
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Add event listeners to 'Add' button
-document.getElementById("add-investment").addEventListener("click", function() {
+document.getElementById("add-investment").addEventListener("click", function () {
 	addInvestment();
 });
 
@@ -87,19 +87,22 @@ function clearInvestmentBox() {
 	document.getElementById("investment-box").value = '';
 };
 
-// Add a single event listener to the 'Add' button in the 'Add Trades' form
-document.getElementById("add-trade-button").addEventListener("click", function() {
-    // Check if the form is valid
-    if (document.getElementById("add-trade").checkValidity()) {
-        // If form is valid, first handle the trade data storage
-        handleTradeDataStorage();
+// Add event listener to the 'Add' button in the 'Add Trades' form to store tades data in local storage and perform calculations for the 'Summary' table
+document.getElementById("add-trade-button").addEventListener("click", function () {
 
-        // Then perform the calculation for the 'Summary' table
-        calculateTotalProfitLossAmount();
-    } else {
-        // If form is not valid, trigger error messages
-        document.getElementById("add-trade").reportValidity();
-    }
+	// Check if the form is valid
+	if (document.getElementById("add-trade").checkValidity()) {
+
+		// If form is valid, first handle the trade data storage
+		handleTradeDataStorage();
+
+		// Then perform the calculation for the 'Summary' table
+		calculateTotalProfitLossAmount();
+	} else {
+
+		// If form is not valid, trigger error messages
+		document.getElementById("add-trade").reportValidity();
+	}
 });
 
 // Get the 'Profit/loss amount' entered by the user in the form
@@ -111,29 +114,29 @@ function getProfitLossAmount() {
 function calculateTotalProfitLossAmount() {
 
 	// Check if the form is valid
-		if (document.getElementById("total-investment").innerText === '0') {
-			alert("First enter investment! Cannot add trades without having an investment to trade!");
-			return;
-		} else {
+	if (document.getElementById("total-investment").innerText === '0') {
+		alert("First enter investment! Cannot add trades without having an investment to trade!");
+		return;
+	} else {
 
-			// If form is valid and investment is entered, proceed with the following logic
-			let enteredProfitLossAmount = getProfitLossAmount();
-			let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
-			if (enteredProfitLossAmount < 0) {
-				if (parseFloat(document.getElementById("current-balance").innerText) + enteredProfitLossAmount < 0) {
-					alert("The loss amount cannot exceed the Current balance, please check your entry!");
-					return;
-				}
+		// If form is valid and investment is entered, proceed with the following logic
+		let enteredProfitLossAmount = getProfitLossAmount();
+		let currentProfitLossAmount = parseFloat(localStorage.getItem("tradingResult")) || 0;
+		if (enteredProfitLossAmount < 0) {
+			if (parseFloat(document.getElementById("current-balance").innerText) + enteredProfitLossAmount < 0) {
+				alert("The loss amount cannot exceed the Current balance, please check your entry!");
+				return;
 			}
-			currentProfitLossAmount += enteredProfitLossAmount;
-
-			// Update local storage upon new entry 
-			localStorage.setItem("tradingResult", currentProfitLossAmount);
-
-			// Call the function to update the displayed profit/loss
-			updateProfitLoss();
-
 		}
+		currentProfitLossAmount += enteredProfitLossAmount;
+
+		// Update local storage upon new entry 
+		localStorage.setItem("tradingResult", currentProfitLossAmount);
+
+		// Call the function to update the displayed profit/loss
+		updateProfitLoss();
+
+	}
 };
 
 // Display the 'Total Profit/loss'
@@ -179,25 +182,25 @@ function updateCurrentBalanceAndProfitLossPercent() {
 };
 
 // Function to handle data storage for entered trades
-function handleTradeDataStorage () {
+function handleTradeDataStorage() {
 
-		// Create an object to store trade details in local storage
-		let tradeData = {
-			openDate: document.getElementById("open-date").value,
-			closeDate: document.getElementById("close-date").value,
-			stockName: document.getElementById("stock").value,
-			result: document.getElementById("result").value,
-			comments: document.getElementById("comments").value,
-		};
+	// Create an object to store trade details in local storage
+	let tradeData = {
+		openDate: document.getElementById("open-date").value,
+		closeDate: document.getElementById("close-date").value,
+		stockName: document.getElementById("stock").value,
+		result: document.getElementById("result").value,
+		comments: document.getElementById("comments").value,
+	};
 
-		// Store trades data only if the investment amount was entered 
-		if (isInvestmentEntered()) {
-			storeTrade(tradeData);
-		}
-		displayTrades();
-		
-		// Clear the form once tade data stored 
-		clearAddTradeForm();
+	// Store trades data only if the investment amount was entered 
+	if (isInvestmentEntered()) {
+		storeTrade(tradeData);
+	}
+	displayTrades();
+
+	// Clear the form once tade data stored 
+	clearAddTradeForm();
 };
 
 // Store trade details in local storage. Ensure trades do not get overwritten, but are stored as arrays. Source: https://blog.logrocket.com/localstorage-javascript-complete-guide/
@@ -261,28 +264,28 @@ function clearAddTradeForm() {
 
 // Clear local storage and reset trade tracker
 document.getElementById("reset").addEventListener("click", function clearLocalStorage() {
-	
+
 	// Clear loclal storage
-    localStorage.clear();
+	localStorage.clear();
 
-	  // Select all 'td' elements in the 'summary-table' and set their content to zero. Source: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
-	  let tds = document.querySelectorAll("#summary-table td");
-	  for (let i = 0; i < tds.length; i++) {
-		  tds[i].textContent = '0'; 
-	  }
-	  	// Clear 'List of trades' table
+	// Select all 'td' elements in the 'summary-table' and set their content to zero. Source: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+	let tds = document.querySelectorAll("#summary-table td");
+	for (let i = 0; i < tds.length; i++) {
+		tds[i].textContent = '0';
+	}
+	// Clear 'List of trades' table
 	document.getElementById("trades-summary").innerHTML = '';
-  });
+});
 
-  // Display popup with instructions, function is used in HTML on button click
-  function displayPopup() {
+// Display popup with instructions, function is used in HTML on button click
+function displayPopup() {
 	document.getElementById("instructions-popup").style.display = "block";
-  };
+};
 
 // Close popup with instructions, function is used in HTML on button click
-	function closePopup() {
-		document.getElementById("instructions-popup").style.display = "none";
-	  };
+function closePopup() {
+	document.getElementById("instructions-popup").style.display = "none";
+};
 
 
 

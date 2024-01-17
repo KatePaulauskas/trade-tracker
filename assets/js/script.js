@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	displayTrades();
 });
 
-// Add event listeners to 'Add' button
+// Add event listeners to 'Add' button on the 'Add investment' form
 document.getElementById("add-investment").addEventListener("click", function () {
 	addInvestment();
 });
@@ -136,6 +136,8 @@ function calculateTotalProfitLossAmount() {
 		// Call the function to update the displayed profit/loss
 		updateProfitLoss();
 
+		// Clear the form once tade data stored and calculations are performed
+		clearAddTradeForm();
 	}
 };
 
@@ -198,9 +200,6 @@ function handleTradeDataStorage() {
 		storeTrade(tradeData);
 	}
 	displayTrades();
-
-	// Clear the form once tade data stored 
-	clearAddTradeForm();
 };
 
 // Store trade details in local storage. Ensure trades do not get overwritten, but are stored as arrays. Source: https://blog.logrocket.com/localstorage-javascript-complete-guide/

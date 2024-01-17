@@ -341,6 +341,8 @@ document.getElementById("add-trade-button").addEventListener("click", function()
 
 __After:__
 
+ - One event listener
+
 ```// Add event listener to the 'Add' button in the 'Add Trades' form to store tades data in local storage and perform calculations for the 'Summary' table
 document.getElementById("add-trade-button").addEventListener("click", function() {
 

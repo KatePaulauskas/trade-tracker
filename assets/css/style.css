@@ -117,8 +117,8 @@ input::placeholder {
 
 #investment-box {
     margin: 10px;
-    width: 200px;
-    height: 27px;
+    width: 220px;
+    height: 35px;
 }
 
 /* Style action buttons */
@@ -156,8 +156,8 @@ input::placeholder {
 }
 
 #add-trade input {
-    width: 200px;
-    height: 27px;
+    width: 220px;
+    height: 35px;
 }
 
 /* Hide collapsable entry areas on mobile */

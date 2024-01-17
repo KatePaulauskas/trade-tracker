@@ -135,7 +135,7 @@ The second button offers a reset option. By clicking on this, all data is erased
 
 ![Settings](media/settings.jpeg)
 
-A popup with instructions appears when clicking on the button 'Instructions' and can be closed by clicking on the button 'Close':
+A popup with instructions appears on the initial load of the site and when clicking on the button 'Instructions'. It can be closed by clicking on the button 'Close':
 
 ![Instructions](media/instructions-popup.jpeg)
 
@@ -174,7 +174,7 @@ During testing, it was determined that the withdraw function falls outside the s
 
 Action/Feature          | Expected behavior       | Status         |
 |-------------------|-------------------------|----------------|
-|Enter site URL: <https://katepaulauskas.github.io/trade-tracker/> | Site page loads | Pass |
+|Enter site URL: <https://katepaulauskas.github.io/trade-tracker/> | Site page loads, instructions popup appears on the page | Pass |
 |The form 'Add investment' was tested on mobile and larger devices in multiple browsers |
 |Click 'Add' | 'Please fill in this field' appears in the input field | Pass |
 |Enter a negative amount into the input field, click 'Add' | 'Enter a positive amount!' alert appears on the screen | Pass |

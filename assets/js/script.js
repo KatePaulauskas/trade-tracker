@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			collapsibleEntryArea.style.display = collapsibleEntryAreaIsHidden ? "block" : "none";
 		});
 	}
+	displayPopup();
 	updateDisplayedInvestment();
 	updateProfitLoss();
 	updateCurrentBalanceAndProfitLossPercent();
@@ -136,7 +137,7 @@ function calculateTotalProfitLossAmount() {
 		// Call the function to update the displayed profit/loss
 		updateProfitLoss();
 
-		// Clear the form once tade data stored and calculations are performed
+		// Clear the form once trade data stored and calculations are performed
 		clearAddTradeForm();
 	}
 };
